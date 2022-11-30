@@ -41,7 +41,7 @@ namespace N_Communication {
         }
 
     private:
-        uint64_t frame_id{};
+        uint64_t frame_id;
         usb_utc_rx_cmd_t *usb_in_data;
         usb_utc_rx_data_t *usb_data_drv;
         unsigned char endpoint_in;

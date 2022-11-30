@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 project(Communication)
 
 set(INC_DIR /usr/local/include)
-set(LINK_DIR /usr/local/lib /home/lwchong/CLionProjects/usb_camera/)
+set(LINK_DIR /usr/local/lib /home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/)
 
 set(CMAKE_CXX_STANDARD 14)
 include_directories(${INC_DIR})
