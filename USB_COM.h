@@ -5,12 +5,16 @@
 #include <cstring>
 namespace N_Communication {
     typedef struct {
-        double time_utc;
+        int real_utc;
+        float st_time;
+        int date_utc;
         uint32_t checksum;
     } usb_utc_rx_cmd_t;
 
     typedef struct {
-        double time_utc;
+        int real_utc;
+        float st_time;
+        int date_utc;
     } usb_utc_rx_data_t;
 
 
