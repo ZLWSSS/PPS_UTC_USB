@@ -4,7 +4,7 @@
 const uint16_t vendor_id = 0xabcd;
 const uint16_t product_id_list[1] = {0x1234};
 const unsigned char endpoint_1 = 0x81;
-const int USB_RX_WORDS_PER_MESSAGE = 16;
+const int USB_RX_WORDS_PER_MESSAGE = 20;
 void imu_cbf_wrapper(struct libusb_transfer* _transfer);
 
 int main(){

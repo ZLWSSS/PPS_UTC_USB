@@ -6,15 +6,15 @@
 namespace N_Communication {
     typedef struct {
         int real_utc;
-        float st_time;
         int date_utc;
+        double st_time;
         uint32_t checksum;
     } usb_utc_rx_cmd_t;
 
     typedef struct {
         int real_utc;
-        float st_time;
         int date_utc;
+        double st_time;
     } usb_utc_rx_data_t;
 
 
