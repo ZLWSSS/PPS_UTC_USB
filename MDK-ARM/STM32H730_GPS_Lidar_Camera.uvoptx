@@ -201,35 +201,20 @@
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
-          <ItemText>gotovalidate,0x0A</ItemText>
+          <ItemText>rx_index,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>10</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rx_index,0x0A</ItemText>
+          <ItemText>date</ItemText>
         </Ww>
         <Ww>
           <count>11</count>
           <WinNumber>1</WinNumber>
-          <ItemText>calculated_check</ItemText>
-        </Ww>
-        <Ww>
-          <count>12</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>check</ItemText>
-        </Ww>
-        <Ww>
-          <count>13</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>date</ItemText>
-        </Ww>
-        <Ww>
-          <count>14</count>
-          <WinNumber>1</WinNumber>
           <ItemText>comma_index,0x0A</ItemText>
         </Ww>
         <Ww>
-          <count>15</count>
+          <count>12</count>
           <WinNumber>1</WinNumber>
           <ItemText>PPS_Camera_Trigger_Time,0x0A</ItemText>
         </Ww>
@@ -240,7 +225,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>

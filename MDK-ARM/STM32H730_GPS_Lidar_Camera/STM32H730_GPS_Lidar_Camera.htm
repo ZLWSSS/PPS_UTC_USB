@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32H730_GPS_Lidar_Camera\STM32H730_GPS_Lidar_Camera.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32H730_GPS_Lidar_Camera\STM32H730_GPS_Lidar_Camera.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue Dec 06 17:01:55 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue Dec 06 17:42:14 2022
 <BR><P>
 <H3>Maximum Stack Usage =        336 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -884,9 +884,9 @@ Global Symbols
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 <LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_MspInit
 <LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_camera_utc_data
+<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
 
 <P><STRONG><a name="[238]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
@@ -904,9 +904,9 @@ Global Symbols
 <P><STRONG><a name="[23c]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[db]"></a>__aeabi_errno_addr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_strtoul
+<BR><BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_strtoul
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
 <P><STRONG><a name="[23d]"></a>__errno$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
@@ -1179,14 +1179,14 @@ Global Symbols
 <P><STRONG><a name="[fc]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32h7xx_hal_gpio.o(i.HAL_GPIO_WritePin))
 <BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;camera_cali_task
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Trigger_judgment
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 </UL>
 
 <P><STRONG><a name="[f4]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32h7xx_hal.o(i.HAL_GetTick))
@@ -1897,9 +1897,9 @@ Global Symbols
 <LI>Call Chain = HAL_UART_RxCpltCallback &rArr; GPS_validate &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_validate
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPS_parse
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_RxISR_8BIT_FIFOEN
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_RxISR_8BIT
@@ -1917,12 +1917,12 @@ Global Symbols
 <P><STRONG><a name="[18a]"></a>LCD_Address_Set</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, tftlcd.o(i.LCD_Address_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = LCD_Address_Set &rArr; LCD_Write_HalfWord &rArr; LCD_SPI_Send &rArr; SPI6_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
+<BR>[Calls]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
+<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
+<BR>[Called By]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 </UL>
 
 <P><STRONG><a name="[18d]"></a>LCD_Clear</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, tftlcd.o(i.LCD_Clear))
@@ -1937,8 +1937,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LCD_Fill &rArr; LCD_Address_Set &rArr; LCD_Write_HalfWord &rArr; LCD_SPI_Send &rArr; SPI6_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
+<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 </UL>
@@ -1947,10 +1947,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LCD_Init &rArr; LCD_Address_Set &rArr; LCD_Write_HalfWord &rArr; LCD_SPI_Send &rArr; SPI6_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Prepare_LCD
 </UL>
@@ -2963,8 +2963,8 @@ Global Symbols
 <P><STRONG><a name="[1ea]"></a>init_camera_utc_data</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, task_camera_utc.o(i.init_camera_utc_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = init_camera_utc_data &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_gps_data
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_gps_data
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;camera_utc_task
 </UL>
@@ -3017,9 +3017,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = osThreadCreate &rArr; xTaskCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
+<BR>[Calls]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
+<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
-<LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;makeFreeRtosPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FREERTOS_Init
 </UL>
@@ -3027,10 +3027,10 @@ Global Symbols
 <P><STRONG><a name="[201]"></a>pvPortMalloc</STRONG> (Thumb, 306 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<BR>[Calls]<UL><LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 <LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+<LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 </UL>
@@ -3042,8 +3042,8 @@ Global Symbols
 <P><STRONG><a name="[bc]"></a>trigger_message_task</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, task_trigger_message.o(i.trigger_message_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = trigger_message_task &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_gps_data
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<BR>[Calls]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
+<LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_gps_data
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> freertos.o(.constdata)
 </UL>
@@ -3094,9 +3094,9 @@ Global Symbols
 <P><STRONG><a name="[1fc]"></a>vPortFree</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, heap_4.o(i.vPortFree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Calls]<UL><LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate
 <LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvDeleteTCB
@@ -3177,8 +3177,8 @@ Global Symbols
 <LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsertEnd
 <LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+<LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
 <P><STRONG><a name="[205]"></a>xTaskResumeAll</STRONG> (Thumb, 224 bytes, Stack size 16 bytes, tasks.o(i.xTaskResumeAll))
@@ -3591,10 +3591,10 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI6_WriteData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
-<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
+<BR>[Called By]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
+<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_HalfWord
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 </UL>
 
 <P><STRONG><a name="[18b]"></a>LCD_Write_Cmd</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, tftlcd.o(i.LCD_Write_Cmd))
@@ -3603,8 +3603,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<BR>[Called By]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
 </UL>
 
 <P><STRONG><a name="[191]"></a>LCD_Write_Data</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, tftlcd.o(i.LCD_Write_Data))
@@ -3669,8 +3669,8 @@ Local Symbols
 <LI>Call Chain = prvInitialiseNewTask
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pxPortInitialiseStack
-<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialiseItem
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreateStatic
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCreate

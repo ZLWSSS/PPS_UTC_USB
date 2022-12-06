@@ -11,8 +11,8 @@ uint8_t PPS_Output_Flag;
 //< and not be reset. The flag will be reset once RESET signal for camera 
 //< has been output.
 uint8_t flag_camera_trigger = 0;
-uint8_t exit_flag = 1;
-uint8_t rising_flag = 0;
+uint8_t exit_flag;
+uint8_t rising_flag;
 uint8_t first_run=1;
 uint8_t enable_auto_send=0;
 
@@ -46,10 +46,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			HAL_TIM_Base_Start_IT(&htim3);
 			HAL_TIM_Base_Stop_IT(&htim4);
 			HAL_TIM_Base_Start_IT(&htim4);
-			// 重置timer2时间
-			Since_PPS_Received_Time = 0;
+
 			PPS_Output_Flag = 1;
 		}
+		// 重置timer2时间
+		Since_PPS_Received_Time = 0;
 	}
 	else if(GPIO_Pin == GPIO_PIN_13)
 	{
