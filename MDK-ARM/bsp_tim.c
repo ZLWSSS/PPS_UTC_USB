@@ -5,55 +5,71 @@
 #include "task_trigger_message.h"
 #include "task_camera_utc.h"
 
-uint64_t Since_PPS_Received_Time;
+uint64_t Since_PPS_Received_Time = 0;
+uint64_t Since_First_PPS_Received_Time = 0;
+uint64_t Since_UTC = 0;
 uint64_t Lidar_IMU_Triggered_Time;
 uint64_t Lidar_IMU_Reset_Time;
-uint64_t Camera_Trigger_Time_4;
-uint64_t PPS_Camera_Trigger_Time;
-uint8_t  flag_Tim_Triggered = 0;
-uint8_t  flag_Camera_Triggered = 0;
+uint64_t Camera_Trigger_Time;
 uint8_t  Prepare_send_data = 0;
-uint8_t  Camera_Timer_Request = 0;
+uint8_t  Camera_Timer_Request = 0;  // request to send camera trigger timestamp to PC
 
 uint32_t Set_Occupation = 1000;
 uint32_t Message_interval = 60000;
-uint32_t Camera_Period = 10000;
+uint32_t Camera_Period = 20000;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	//timer3: alternate PPS in case of absence of PPS
 	if(htim->Instance == TIM3)
 	{
+		if (!flag_camera_trigger)
+		{
+			// trigger camera
+			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
+			Camera_Trigger_Time = Since_First_PPS_Received_Time;
+			flag_camera_trigger = 1;
+		}
 		if(Since_PPS_Received_Time > 1500000)
 		{
-			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
-			PPS_Camera_Trigger_Time = Since_PPS_Received_Time;	
+			//è§¦å‘IMUä¸Lidar (highest priority in this interrupt callback function) 	
 			HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_SET);
+			Lidar_IMU_Triggered_Time = Since_First_PPS_Received_Time;
 
-			
-			Lidar_IMU_Triggered_Time = Since_PPS_Received_Time;
+			//é‡ç½®tim4
 			HAL_TIM_Base_Stop_IT(&htim4);
-			if(enable_auto_send)
-			{
-				flag_camera_utc = 1;
-				Camera_Timer_Request = 1;
-			}
-			flag_Tim_Triggered = 1;
+			HAL_TIM_Base_Start_IT(&htim4);
+			// TODO
+			//if(enable_auto_send)
+			//{
+			//	flag_camera_utc = 1;
+			//	Camera_Timer_Request = 1;
+			//}
+
+			PPS_Output_Flag = 1;
 		}
 	}
-	//Timer2: Time Counter
+	// Timer2: Time Counter
+	// also set/reset the pin after trigger/PPS to 
+	// satisfy the requirement of occupany and
+	// prepare for next trigger/PPS
 	else if(htim->Instance == TIM2)
 	{
 		Since_PPS_Received_Time++;
+		Since_First_PPS_Received_Time++;
+		Since_UTC++;
 		Trigger_judgment();
-		} 
+	} 
 	//timer4:enbale the camera: 20hz
 	else if(htim->Instance == TIM4)
 	{
-		HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
-		Camera_Trigger_Time_4 = Since_PPS_Received_Time;
-		flag_Camera_Triggered = 1;
+		if (!flag_camera_trigger)
+		{
+			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
+			Camera_Trigger_Time = Since_First_PPS_Received_Time;
+			flag_camera_trigger = 1;
+		}
 	}
 	//timer1: ingonre
 	else if (htim->Instance == TIM1) {
@@ -63,59 +79,34 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void Trigger_judgment(void)
 {
-	if(flag_Tim_Triggered)
+	if(PPS_Output_Flag)
 	{
-		//Èç¹û¼ÆÊ±Æ÷Ê±¼ä¼õÈ¥À×´ïimuµÄ´¥·¢Ê±¼ä´óÓÚÕ¼¿Õ±È£¬ÄÇÃ´¸´Î»
-		if((Since_PPS_Received_Time - Lidar_IMU_Triggered_Time) > Set_Occupation)
+		//å¦‚æœè®¡æ—¶å™¨æ—¶é—´å‡å»é›·è¾¾imuçš„è§¦å‘æ—¶é—´å¤§äºå ç©ºæ¯”ï¼Œé‚£ä¹ˆå¤ä½
+		if((Since_First_PPS_Received_Time - Lidar_IMU_Triggered_Time) > Set_Occupation)
 		{
 			HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_RESET);
-			Lidar_IMU_Reset_Time = Since_PPS_Received_Time;
-			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
-			//Èç¹ûĞèÒª´¥·¢Ïà»ú
-			if(Camera_Timer_Request)
-			{	
-				HAL_TIM_Base_Start_IT(&htim4);
-				Camera_Timer_Request = 0;
-			}
-			//¿ÉÒÔ¸øPC·¢ËÍUTCÊ±¼ä´Á
+			Lidar_IMU_Reset_Time = Since_First_PPS_Received_Time;
+			PPS_Output_Flag = 0;
 			Prepare_send_data = 1;
-			flag_Tim_Triggered = 0;
 		}
 	}
-	else if(PPS_Triggered_Flag)
+	//å¦‚æœç›¸æœºè¢«è§¦å‘äº†ï¼Œè¿™é‡Œéœ€è¦å¤ä½ç”µå¹³
+	if(flag_camera_trigger)
 	{
-		//Èç¹ûÊÇpps´¥·¢Ïà»ú¡¢IMUÓëÀ×´ï
-		if(Since_PPS_Received_Time > Set_Occupation)
+		if(Since_First_PPS_Received_Time - Camera_Trigger_Time > Camera_Period)
 		{
-			HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_RESET);
-			Lidar_IMU_Reset_Time = Since_PPS_Received_Time;
 			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
-			if(Camera_Timer_Request)
-			{	
-				HAL_TIM_Base_Start_IT(&htim4);
-				Camera_Timer_Request = 0;
-			}
-			Prepare_send_data = 1;
-			PPS_Triggered_Flag = 0;
+			flag_camera_trigger = 0;
 		}
 	}
-	//Èç¹ûÏà»ú±»´¥·¢ÁË£¬ÕâÀïĞèÒª¸´Î»µçÆ½
-	else if(flag_Camera_Triggered)
-	{
-		if(Since_PPS_Received_Time - Camera_Trigger_Time_4 > Camera_Period)
-		{
-			flag_Camera_Triggered = 0;
-			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
-		}
-	}
-	//Èç¹û¿ÉÒÔ×¼±¸·¢ËÍÊı¾İ£¬ÄÇÃ´ÔÚÖÁÉÙ60msÖ®ºó£¬´¥·¢ÈÎÎñ£ºÈÎÎñÎª×î¸ßÓÅÏÈ¼¶¡£
+	//å¦‚æœå¯ä»¥å‡†å¤‡å‘é€æ•°æ®ï¼Œé‚£ä¹ˆåœ¨è‡³å°‘60msä¹‹åï¼Œè§¦å‘ä»»åŠ¡ï¼šä»»åŠ¡ä¸ºæœ€é«˜ä¼˜å…ˆçº§ã€‚
 	if(Prepare_send_data)
 	{
-		if((Since_PPS_Received_Time - Lidar_IMU_Reset_Time) > Message_interval)
+		if((Since_First_PPS_Received_Time - Lidar_IMU_Reset_Time) > Message_interval)
 		{
-			flag_task_trigger_message=1;
+			// TODO
+			// send data
 			Prepare_send_data = 0;
 		}
 	}

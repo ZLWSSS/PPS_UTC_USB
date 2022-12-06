@@ -3,7 +3,7 @@
 
 typedef struct{
 
-  double utc_time;
+    int utc_time;
 	char 	 Position_Status;
 	double Latitude;
 	char   Latitude_Direction;
