@@ -3,6 +3,7 @@
 #include "string.h"
 #include "gps.h"
 #include "bsp_gpio.h"
+#include "bsp_tim.h"
 #include "tftlcd.h"
 
 typedef struct{
@@ -39,9 +40,8 @@ static uint32_t data_checksum(uint32_t* data_to_check, uint8_t length)
 
 void Send_Camera_Shot_Time(void)
 {
-	utc_real_data.real_utc = (int)(local_gps_data->utc_time);
-	//有pps信号后，这里需要改成PPS_Camera_Trigger_Time
-	utc_real_data.st_time = (double)(((double)PPS_Camera_Trigger_Time / 1000000.f) - 1);
+	utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
+	utc_real_data.real_utc = local_gps_data->utc_time;
 	utc_real_data.date_utc = local_gps_data->Date;
 	utc_real_data.checksum = data_checksum((uint32_t*) &utc_real_data, sizecheck);
 	USBD_CUSTOM_HID_SendReport_HS((uint8_t*) &utc_real_data,  sizeutccmd);

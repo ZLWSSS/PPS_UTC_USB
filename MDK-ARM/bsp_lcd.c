@@ -8,5 +8,5 @@ void Prepare_LCD(void)
 	BACK_COLOR=BLACK;
 	POINT_COLOR=CYAN;	
 	LCD_ShowString(0, 0, 200, 12, 32, "CUHK ERB106");
-	LCD_ShowString(0, 35, 160, 12, 12, "Version 0.2 Arthor LW");
+	LCD_ShowString(0, 35, 160, 12, 12, "Version 0.3 Arthor TF&LW");
 }

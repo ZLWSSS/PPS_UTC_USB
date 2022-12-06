@@ -3,7 +3,7 @@
 
 typedef struct{
 
-  double utc_time;
+    int utc_time;
 	char 	 Position_Status;
 	double Latitude;
 	char   Latitude_Direction;
@@ -17,6 +17,7 @@ typedef struct{
 	char   Mode_ind;
 } GPS_t;
 
+extern uint8_t rx_data;
 
 void GPS_Init(void);
 void GSP_USBPrint(char *data);
