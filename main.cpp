@@ -4,8 +4,11 @@
 const uint16_t vendor_id = 0xabcd;
 const uint16_t product_id_list[1] = {0x1234};
 const unsigned char endpoint_1 = 0x81;
+const unsigned char endpoint_2 = 0x01;
 const int USB_RX_WORDS_PER_MESSAGE = 20;
-void imu_cbf_wrapper(struct libusb_transfer* _transfer);
+const int USB_TX_WORDS_PER_MESSAGE = 4;
+void stm32_rx_cbf_wrapper(struct libusb_transfer* _transfer);
+
 
 int main(){
     typedef std::vector<std::shared_ptr<N_Communication::USB_COM_UTC>> Vec_pScom;
@@ -15,9 +18,9 @@ int main(){
         USB_List.push_back(
                 std::make_shared<N_Communication::USB_COM_UTC>(
                         USB_RX_WORDS_PER_MESSAGE,
-                        4, N_Communication::Vendor_id_Hex(vendor_id),
+                        USB_TX_WORDS_PER_MESSAGE, N_Communication::Vendor_id_Hex(vendor_id),
                         N_Communication::Product_id_Hex(product_id_list[i]),
-                        endpoint_1, 0x00));
+                        endpoint_1, endpoint_2));
 
     //get the utc data
     const N_Communication::usb_utc_rx_data_t * local_usb_drv =USB_List[0]->get_usb_received_data();
@@ -26,7 +29,8 @@ int main(){
     //start transmit
     for (auto & Iter : USB_List) //reference here
     {
-        Iter->USB_Com_Start_Trans_Asy(imu_cbf_wrapper);
+        Iter->USB_Com_Start_Trans_Asy(stm32_rx_cbf_wrapper);
+        Iter->Send_Cmd(2);
     }
 
     //if you want to print out data
@@ -39,8 +43,9 @@ int main(){
     }
 }
 
-void imu_cbf_wrapper(struct libusb_transfer* _transfer)
+void stm32_rx_cbf_wrapper(struct libusb_transfer* _transfer)
 {
     auto* temp = reinterpret_cast<N_Communication::USB_COM_UTC*>(_transfer->user_data);
     temp->USB_In_CBF(_transfer);
 }
+

@@ -1,0 +1,4 @@
+/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug/CMakeFiles/Communication.dir
+/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug/CMakeFiles/USBSharedLib.dir

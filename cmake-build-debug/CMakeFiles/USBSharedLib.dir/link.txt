@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libUSBSharedLib.so -o libUSBSharedLib.so CMakeFiles/USBSharedLib.dir/USB_COM.cpp.o CMakeFiles/USBSharedLib.dir/Inter_Board_Com.cpp.o  -L/usr/local/lib  -L/home/lwchong/CLionProjects/usb_camera 

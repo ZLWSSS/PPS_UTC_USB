@@ -17,7 +17,6 @@ namespace N_Communication {
         double st_time;
     } usb_utc_rx_data_t;
 
-
     class USB_COM_UTC : public N_Communication::USB_COM {
     public:
         USB_COM_UTC(int in_length_8b, int out_length_8b, N_Communication::Vendor_id_Hex _vendor_id,
@@ -43,7 +42,7 @@ namespace N_Communication {
         inline const usb_utc_rx_data_t *get_usb_received_data() {
             return usb_data_drv;
         }
-
+        void Send_Cmd(int _cmd_number);
     private:
         uint64_t frame_id;
         usb_utc_rx_cmd_t *usb_in_data;
@@ -51,6 +50,8 @@ namespace N_Communication {
         unsigned char endpoint_in;
         unsigned char endpoint_out;
         bool if_print;
+
+        void Send_Command_2_STM32(int cmd_number, void (*cbf_wrapper)(struct libusb_transfer *));
     };
 }
 #endif

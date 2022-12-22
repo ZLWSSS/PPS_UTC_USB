@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Communication.dir/main.cpp.o  -o Communication  -L/usr/local/lib  -L/home/lwchong/CLionProjects/usb_camera -lusb-1.0 libUSBSharedLib.so -Wl,-rpath,/usr/local/lib:/home/lwchong/CLionProjects/usb_camera:/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug 

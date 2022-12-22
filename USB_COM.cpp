@@ -1,5 +1,11 @@
 #include "USB_COM.h"
 
+void stm32_tx_cbf_wrapper(struct libusb_transfer* _transfer)
+{
+    auto* temp = reinterpret_cast<N_Communication::USB_COM_UTC*>(_transfer->user_data);
+    temp->USB_Out_CBF(_transfer);
+}
+
 N_Communication::USB_COM_UTC::USB_COM_UTC(int in_length_8b, int out_length_8b ,N_Communication::Vendor_id_Hex _vendor_id, N_Communication::Product_id_Hex _product_id,
                          unsigned char _endpoint_in, unsigned char _endpoit_out):
                          N_Communication::USB_COM(in_length_8b,out_length_8b,_vendor_id,_product_id),
@@ -26,6 +32,25 @@ void N_Communication::USB_COM_UTC::USB_Com_Start_Trans_Asy(void (*cbf_wrapper)(s
         std::cerr << "[Error] Can not start transmitting\n";
         std::abort();
     }
+}
+
+void N_Communication::USB_COM_UTC::Send_Cmd(int _cmd_number)
+{
+    this->Send_Command_2_STM32(_cmd_number, stm32_tx_cbf_wrapper);
+}
+
+void N_Communication::USB_COM_UTC::Send_Command_2_STM32(int cmd_number, void (*cbf_wrapper)(struct libusb_transfer *))
+{
+    for(int i = 0; i < usb_message_32_2_8; i++)
+    {
+        tx_buff[4 * i] = cmd_number;
+        tx_buff[4 * i + 1] = cmd_number >> 8;
+        tx_buff[4 * i + 2] = cmd_number >> 16;
+        tx_buff[4 * i + 3] = cmd_number >> 24;
+    }
+    libusb_fill_interrupt_transfer(transfer_tx, get_device_handle(), endpoint_out, tx_buff, usb_message_out_length
+            , cbf_wrapper,this,0);
+    libusb_submit_transfer(transfer_tx);
 }
 
 void N_Communication::USB_COM_UTC::Deal_Out_Data() {
@@ -69,7 +94,13 @@ void N_Communication::USB_COM_UTC::USB_In_CBF(struct libusb_transfer *transfer) 
 }
 
 void N_Communication::USB_COM_UTC::USB_Out_CBF(struct libusb_transfer *transfer) {
-
+    if(transfer->status == LIBUSB_TRANSFER_COMPLETED)
+    {
+        std::cout << " Send Success!\n";
+    }
+    else{
+        std::cout << "Send Failed!\n";
+    }
 }
 
 void N_Communication::USB_COM_UTC::Print_Rx_Data() {

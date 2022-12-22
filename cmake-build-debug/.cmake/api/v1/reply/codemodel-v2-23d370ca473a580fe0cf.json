@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Communication",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Communication::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Communication-Debug-a95ae85434cf4a651485.json",
+					"name" : "Communication",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "USBSharedLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-USBSharedLib-Debug-b11032cb93d62e639484.json",
+					"name" : "USBSharedLib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB/cmake-build-debug",
+		"source" : "/home/lwchong/CLionProjects/PPS_UTC_USB/PPS_UTC_USB"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
