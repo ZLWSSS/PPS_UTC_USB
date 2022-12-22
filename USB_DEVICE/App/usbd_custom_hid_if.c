@@ -22,7 +22,10 @@
 #include "usbd_custom_hid_if.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+#include "BSP_GPIO.h" 
+#include "bsp_tim.h"
+#include "task_camera_cali.h"
+uint32_t usb_rx_cmd;
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,15 +94,21 @@
 __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_HS[USBD_CUSTOM_HID_REPORT_DESC_SIZE] __ALIGN_END =
 {
   /* USER CODE BEGIN 1 */
-	0x05, 0x01,                    // USAGE_PAGE (Generic Desktop)
+  0x05, 0x01,                    // USAGE_PAGE (Generic Desktop)
   0x09, 0x00,                    // USAGE (Undefined)
   0xa1, 0x01,                    // COLLECTION (Application)
   0x09, 0x00,                    //   USAGE (Undefined)
   0x15, 0x00,                    //   LOGICAL_MINIMUM (0)
   0x26, 0xff, 0x00,              //   LOGICAL_MAXIMUM (255)
-  0x95, 0x14,                    //   REPORT_COUNT (12)
+  0x95, 0x14,                    //   REPORT_COUNT (20)
   0x75, 0x08,                    //   REPORT_SIZE (8)
-  0x81, 0x00,                    //   INPUT (Data,Ary,Abs)                           // END_COLLECTION
+  0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
+  0x09, 0x00,                    //   USAGE (Undefined)
+  0x15, 0x00,                    //   LOGICAL_MINIMUM (0)
+  0x26, 0xff, 0x00,              //   LOGICAL_MAXIMUM (255)
+  0x95, 0x04,                    //   REPORT_COUNT (4)
+  0x75, 0x08,                    //   REPORT_SIZE (8)
+  0x91, 0x00,                    //   OUTPUT (Data,Ary,Abs)
   /* USER CODE END 1 */
   0xC0    /*     END_COLLECTION             */
 };
@@ -192,7 +201,23 @@ static int8_t CUSTOM_HID_OutEvent_HS(uint8_t event_idx, uint8_t state)
   {
     return -1;
   }
-
+	
+	USBD_CUSTOM_HID_HandleTypeDef *hhid = (USBD_CUSTOM_HID_HandleTypeDef *)(hUsbDeviceHS.pClassData);
+	usb_rx_cmd = (hhid->Report_buf[3] << 24) + (hhid->Report_buf[2] << 16) + (hhid->Report_buf[1] << 8) + (hhid->Report_buf[0]);
+	switch(usb_rx_cmd)
+	{
+		case 0:
+			Trigger_IMU_Lidar();
+			break;
+		case 1:
+			trigger_camera();
+			break;
+		case 2:
+			enable_auto_send = 1;
+			break;
+		default:
+			break;
+	}
   return (USBD_OK);
   /* USER CODE END 10 */
 }

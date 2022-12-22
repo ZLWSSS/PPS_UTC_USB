@@ -106,6 +106,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
+
   /* USER CODE BEGIN RTOS_THREADS */
 	osThreadDef(USBCAMERA_Task, camera_utc_task, osPriorityHigh, 0, 256);
   task_camera_utc_handle = osThreadCreate(osThread(USBCAMERA_Task), NULL);

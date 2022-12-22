@@ -39,3 +39,13 @@ void camera_cali_task(void const *pvParameters)
 		osDelay(1);
 	}
 }
+
+void trigger_camera(void)
+{
+	HAL_UART_AbortReceive_IT(&huart1);
+	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
+	Send_Camera_Shot_Time();
+	HAL_UART_Receive_IT(&huart1, &rx_data, 1);
+	delay_ms(10);
+	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
+}

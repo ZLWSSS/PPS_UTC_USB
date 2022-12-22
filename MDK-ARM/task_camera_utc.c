@@ -60,7 +60,7 @@ void camera_utc_task(void const *pvParameters)
 			flag_camera_utc = 0;
 		}
 		//用来显示自动触发是否开始
-		if(enable_auto_send&&not_print)
+		if(enable_auto_send & not_print)
 		{
 			not_print=0;
 			LCD_ShowString(0, 50, 160, 32, 32, "Start AUTO Transmit!");

@@ -15,5 +15,6 @@ extern uint64_t Lidar_IMU_Triggered_Time;
 void Trigger_judgment(void);
 void Send_Camera_Shot_Time(void);
 void init_camera_utc_data(void);
+void Trigger_IMU_Lidar(void);
 
 #endif

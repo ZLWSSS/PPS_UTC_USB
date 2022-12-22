@@ -31,6 +31,8 @@
 
 /* USER CODE BEGIN INCLUDE */
 int8_t USBD_CUSTOM_HID_SendReport_HS(uint8_t *report, uint16_t len);
+extern uint32_t usb_rx_cmd;
+	 
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY

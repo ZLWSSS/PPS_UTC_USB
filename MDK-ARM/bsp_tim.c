@@ -4,6 +4,7 @@
 #include "cmsis_os.h"
 #include "task_trigger_message.h"
 #include "task_camera_utc.h"
+#include "usbd_custom_hid_if.h"
 
 uint64_t Since_PPS_Received_Time = 0;
 uint64_t Since_First_PPS_Received_Time = 0;
@@ -18,6 +19,15 @@ uint32_t Set_Occupation = 1000;
 uint32_t Message_interval = 60000;
 uint32_t Camera_Period = 20000;
 
+void Trigger_IMU_Lidar(void)
+{
+	//触发IMU与Lidar (highest priority in this interrupt callback function) 	
+	HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_SET);
+	Lidar_IMU_Triggered_Time = Since_First_PPS_Received_Time;
+	PPS_Output_Flag = 1;
+}
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	//timer3: alternate PPS in case of absence of PPS
@@ -30,24 +40,19 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			Camera_Trigger_Time = Since_First_PPS_Received_Time;
 			flag_camera_trigger = 1;
 		}
+		
 		if(Since_PPS_Received_Time > 1500000)
 		{
-			//触发IMU与Lidar (highest priority in this interrupt callback function) 	
-			HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_SET);
-			Lidar_IMU_Triggered_Time = Since_First_PPS_Received_Time;
-
 			//重置tim4
 			HAL_TIM_Base_Stop_IT(&htim4);
 			HAL_TIM_Base_Start_IT(&htim4);
+			Trigger_IMU_Lidar();
 			// TODO
-			//if(enable_auto_send)
-			//{
-			//	flag_camera_utc = 1;
-			//	Camera_Timer_Request = 1;
-			//}
-
-			PPS_Output_Flag = 1;
+			if(enable_auto_send)
+			{
+				flag_camera_utc = 1;
+				Camera_Timer_Request = 1;
+			}
 		}
 	}
 	// Timer2: Time Counter
@@ -107,6 +112,7 @@ void Trigger_judgment(void)
 		{
 			// TODO
 			// send data
+			flag_task_trigger_message = 1;
 			Prepare_send_data = 0;
 		}
 	}

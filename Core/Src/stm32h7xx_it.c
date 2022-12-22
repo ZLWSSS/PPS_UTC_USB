@@ -60,8 +60,8 @@ extern DMA_HandleTypeDef hdma_spi6_tx;
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
-extern DMA_HandleTypeDef hdma_usart2_tx;
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
 extern TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN EV */
@@ -167,20 +167,6 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles DMA1 stream0 global interrupt.
-  */
-void DMA1_Stream0_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA1_Stream0_IRQn 0 */
-
-  /* USER CODE END DMA1_Stream0_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_usart2_tx);
-  /* USER CODE BEGIN DMA1_Stream0_IRQn 1 */
-
-  /* USER CODE END DMA1_Stream0_IRQn 1 */
-}
-
-/**
   * @brief This function handles EXTI line[9:5] interrupts.
   */
 void EXTI9_5_IRQHandler(void)
@@ -265,6 +251,20 @@ void USART1_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles USART2 global interrupt.
+  */
+void USART2_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART2_IRQn 0 */
+
+  /* USER CODE END USART2_IRQn 0 */
+  HAL_UART_IRQHandler(&huart2);
+  /* USER CODE BEGIN USART2_IRQn 1 */
+
+  /* USER CODE END USART2_IRQn 1 */
+}
+
+/**
   * @brief This function handles EXTI line[15:10] interrupts.
   */
 void EXTI15_10_IRQHandler(void)
@@ -277,6 +277,34 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USB On The Go HS End Point 1 Out global interrupt.
+  */
+void OTG_HS_EP1_OUT_IRQHandler(void)
+{
+  /* USER CODE BEGIN OTG_HS_EP1_OUT_IRQn 0 */
+
+  /* USER CODE END OTG_HS_EP1_OUT_IRQn 0 */
+  HAL_PCD_IRQHandler(&hpcd_USB_OTG_HS);
+  /* USER CODE BEGIN OTG_HS_EP1_OUT_IRQn 1 */
+
+  /* USER CODE END OTG_HS_EP1_OUT_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USB On The Go HS End Point 1 In global interrupt.
+  */
+void OTG_HS_EP1_IN_IRQHandler(void)
+{
+  /* USER CODE BEGIN OTG_HS_EP1_IN_IRQn 0 */
+
+  /* USER CODE END OTG_HS_EP1_IN_IRQn 0 */
+  HAL_PCD_IRQHandler(&hpcd_USB_OTG_HS);
+  /* USER CODE BEGIN OTG_HS_EP1_IN_IRQn 1 */
+
+  /* USER CODE END OTG_HS_EP1_IN_IRQn 1 */
 }
 
 /**
