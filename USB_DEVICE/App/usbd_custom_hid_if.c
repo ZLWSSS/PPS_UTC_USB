@@ -207,10 +207,11 @@ static int8_t CUSTOM_HID_OutEvent_HS(uint8_t event_idx, uint8_t state)
 	switch(usb_rx_cmd)
 	{
 		case 0:
-			Trigger_IMU_Lidar();
+			trigger_imu();
 			break;
 		case 1:
-			trigger_camera();
+      if (!enable_auto_send)
+			  trigger_camera();
 			break;
 		case 2:
 			enable_auto_send = 1;

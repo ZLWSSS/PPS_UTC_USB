@@ -27,12 +27,13 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			HAL_TIM_Base_Start_IT(&htim2);
 			first_run = 0;
 		}*/
-		if(!flag_camera_trigger)
+		if(!flag_camera_trigger && enable_auto_send)
 		{
 			// trigger camera
 			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
 			Camera_Trigger_Time = Since_First_PPS_Received_Time;
 			flag_camera_trigger = 1;
+			flag_camera_utc = 1;
 		}
 		if(Since_PPS_Received_Time < 1500000)
 		{
@@ -52,6 +53,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		// ÖØÖÃtimer2Ê±¼ä
 		Since_PPS_Received_Time = 0;
 	}
+	// TODO
 	else if(GPIO_Pin == GPIO_PIN_13)
 	{
 		if(exit_flag == 0)
@@ -68,7 +70,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	{
 		if(HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_12) == GPIO_PIN_RESET)
 		{
-			enable_auto_send = 1;
+			// enable_auto_send = 1;
 		}
 	}
 }

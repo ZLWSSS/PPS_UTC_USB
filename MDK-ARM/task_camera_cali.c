@@ -42,10 +42,24 @@ void camera_cali_task(void const *pvParameters)
 
 void trigger_camera(void)
 {
-	HAL_UART_AbortReceive_IT(&huart1);
+	// stop GPS UART interrupt to avoid MCU utc update during MCU time sending
+	// HAL_UART_AbortReceive_IT(&huart1);
 	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
 	Send_Camera_Shot_Time();
-	HAL_UART_Receive_IT(&huart1, &rx_data, 1);
+	// restart GPS UART after MCU time sending
+	// HAL_UART_Receive_IT(&huart1, &rx_data, 1);
 	delay_ms(10);
 	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
+}
+
+void trigger_imu(void)
+{
+	// stop GPS UART interrupt to avoid MCU utc update during MCU time sending
+	// HAL_UART_AbortReceive_IT(&huart1);
+	HAL_GPIO_WritePin(GPIOA, IMU_triger_Pin, GPIO_PIN_SET);
+	Send_Camera_Shot_Time();
+	// restart GPS UART after MCU time sending
+	// HAL_UART_Receive_IT(&huart1, &rx_data, 1);
+	delay_ms(10);
+	HAL_GPIO_WritePin(GPIOA, IMU_triger_Pin, GPIO_PIN_RESET);
 }

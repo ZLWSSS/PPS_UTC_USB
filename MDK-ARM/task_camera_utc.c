@@ -19,7 +19,6 @@ const uint8_t sizecheck = 4;
 usb_utc_data utc_real_data;
 const GPS_t* local_gps_data;
 uint8_t flag_camera_utc;
-int task_camera_utc_loop;
 uint8_t not_print=1;
 
 void init_camera_utc_data()
@@ -40,6 +39,7 @@ static uint32_t data_checksum(uint32_t* data_to_check, uint8_t length)
 
 void Send_Camera_Shot_Time(void)
 {
+	//trigger an interrupt 
 	utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
 	utc_real_data.real_utc = local_gps_data->utc_time;
 	utc_real_data.date_utc = local_gps_data->Date;
@@ -55,7 +55,6 @@ void camera_utc_task(void const *pvParameters)
 	{
 		if(flag_camera_utc)
 		{
-			task_camera_utc_loop++;
 			Send_Camera_Shot_Time();
 			flag_camera_utc = 0;
 		}

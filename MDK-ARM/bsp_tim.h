@@ -8,7 +8,7 @@ extern uint64_t Since_PPS_Received_Time;        // time since the latest PPS
 extern uint64_t Since_First_PPS_Received_Time;  // time since the first PPS
 //! timestamp of the MCU is determined by the UTC time plus Since_UTC
 extern uint64_t Since_UTC;                      // time since current UTC time
-extern uint8_t Camera_Timer_Request;
+// extern uint8_t Camera_Timer_Request;
 extern uint64_t Camera_Trigger_Time;
 extern uint64_t Lidar_IMU_Triggered_Time;
 
