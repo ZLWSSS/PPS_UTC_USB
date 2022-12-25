@@ -55,7 +55,9 @@ void camera_utc_task(void const *pvParameters)
 	{
 		if(flag_camera_utc)
 		{
-			Send_Camera_Shot_Time();
+			//trigger GPIO-interrupt by software: the priority is higher than GPS-GPRMC thread.
+			// trigger interrupt and execute the function send_camera_shot_time(), the details are in bsp_gpio.c
+			__HAL_GPIO_EXTI_GENERATE_SWIT(GPIO_PIN_0);
 			flag_camera_utc = 0;
 		}
 		//用来显示自动触发是否开始

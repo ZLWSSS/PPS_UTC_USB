@@ -54,7 +54,7 @@
 /* USER CODE BEGIN FunctionPrototypes */
 osThreadId task_tm_handle;
 osThreadId task_camera_utc_handle;
-osThreadId task_camera_cali;
+//osThreadId task_camera_cali;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
@@ -111,8 +111,8 @@ void MX_FREERTOS_Init(void) {
 	osThreadDef(USBCAMERA_Task, camera_utc_task, osPriorityHigh, 0, 256);
   task_camera_utc_handle = osThreadCreate(osThread(USBCAMERA_Task), NULL);
 	
-	osThreadDef(CAMERACALI_Task, camera_cali_task, osPriorityHigh, 0, 512);
-  task_camera_cali = osThreadCreate(osThread(CAMERACALI_Task), NULL);
+//	osThreadDef(CAMERACALI_Task, camera_cali_task, osPriorityHigh, 0, 512);
+//  task_camera_cali = osThreadCreate(osThread(CAMERACALI_Task), NULL);
 	
 	osThreadDef(trigger_message_Task, trigger_message_task, osPriorityRealtime, 0, 1024);
   task_tm_handle = osThreadCreate(osThread(trigger_message_Task), NULL);

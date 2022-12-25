@@ -74,6 +74,9 @@ void Error_Handler(void);
 #define IMU_PPS_GPIO_Port GPIOC
 #define Lidar_Out_Pin GPIO_PIN_5
 #define Lidar_Out_GPIO_Port GPIOC
+#define Soft_Trigger_Pin GPIO_PIN_0
+#define Soft_Trigger_GPIO_Port GPIOB
+#define Soft_Trigger_EXTI_IRQn EXTI0_IRQn
 #define BLUE_Pin GPIO_PIN_10
 #define BLUE_GPIO_Port GPIOD
 #define LCD_PWR_Pin GPIO_PIN_3
