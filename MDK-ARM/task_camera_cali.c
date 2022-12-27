@@ -12,7 +12,7 @@ int task_flag;
 //这里是按键触发任务（按键发送utc时间）
 void camera_cali_task(void const *pvParameters)
 {
-	delay_init();
+	
 	while(1)
 	{
 		if(exit_flag == 1)
@@ -40,16 +40,20 @@ void camera_cali_task(void const *pvParameters)
 	}
 }
 
+uint8_t test = 0;
+uint8_t test_2 =0;
 void trigger_camera(void)
 {
 	// stop GPS UART interrupt to avoid MCU utc update during MCU time sending
 	// HAL_UART_AbortReceive_IT(&huart1);
 	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
+	test= 1;
 	__HAL_GPIO_EXTI_GENERATE_SWIT(GPIO_PIN_0);
 	// restart GPS UART after MCU time sending
 	// HAL_UART_Receive_IT(&huart1, &rx_data, 1);
 	delay_ms(10);
 	HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
+	test_2=1;
 }
 
 void trigger_imu(void)

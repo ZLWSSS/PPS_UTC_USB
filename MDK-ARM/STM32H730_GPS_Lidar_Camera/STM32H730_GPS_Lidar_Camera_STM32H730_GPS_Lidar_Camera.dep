@@ -1,7 +1,7 @@
 Dependencies for Project 'STM32H730_GPS_Lidar_Camera', Target 'STM32H730_GPS_Lidar_Camera': (DO NOT MODIFY !)
 F (startup_stm32h730xx.s)(0x63A80F72)(--cpu Cortex-M7.fp.dp -g --apcs=interwork -I ..\Core\Inc-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32H730xx SETA 1"--list startup_stm32h730xx.lst --xref -o stm32h730_gps_lidar_camera\startup_stm32h730xx.o --depend stm32h730_gps_lidar_camera\startup_stm32h730xx.d)
-F (../Core/Src/main.c)(0x63A8120F)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\main.o --omf_browse stm32h730_gps_lidar_camera\main.crf --depend stm32h730_gps_lidar_camera\main.d)
-I (../Core/Inc/main.h)(0x63A80F6E)
+F (../Core/Src/main.c)(0x63AA88B1)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\main.o --omf_browse stm32h730_gps_lidar_camera\main.crf --depend stm32h730_gps_lidar_camera\main.d)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -62,20 +62,20 @@ I (../Core/Inc/tim.h)(0x63A4149A)
 I (../Core/Inc/usart.h)(0x63A4149A)
 I (../USB_DEVICE/App/usb_device.h)(0x63A4149A)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Core/Inc/gpio.h)(0x63A41497)
 I (../MDK-ARM/bsp_delay.h)(0x638EF409)
 I (../MDK-ARM/struct_typedef.h)(0x638EF409)
-I (../MDK-ARM/bsp_tim.h)(0x63A80DD8)
+I (../MDK-ARM/bsp_tim.h)(0x63A86AD8)
 I (../MDK-ARM/bsp_gpio.h)(0x638EF409)
 I (../MDK-ARM/bsp_lcd.h)(0x638EF409)
 I (../MDK-ARM/gps.h)(0x638EF8BF)
-F (../Core/Src/gpio.c)(0x63A8140E)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\gpio.o --omf_browse stm32h730_gps_lidar_camera\gpio.crf --depend stm32h730_gps_lidar_camera\gpio.d)
+F (../Core/Src/gpio.c)(0x63A86AD7)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\gpio.o --omf_browse stm32h730_gps_lidar_camera\gpio.crf --depend stm32h730_gps_lidar_camera\gpio.d)
 I (../Core/Inc/gpio.h)(0x63A41497)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -116,7 +116,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-F (../Core/Src/freertos.c)(0x63A8120F)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\freertos.o --omf_browse stm32h730_gps_lidar_camera\freertos.crf --depend stm32h730_gps_lidar_camera\freertos.d)
+F (../Core/Src/freertos.c)(0x63A86AD7)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\freertos.o --omf_browse stm32h730_gps_lidar_camera\freertos.crf --depend stm32h730_gps_lidar_camera\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x633D7D32)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -128,7 +128,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x633D7D32)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -173,14 +173,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x633D7D32)
 I (../MDK-ARM/task_trigger_message.h)(0x638EF409)
-I (../MDK-ARM/bsp_tim.h)(0x63A80DD8)
+I (../MDK-ARM/bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (../MDK-ARM/struct_typedef.h)(0x638EF409)
 I (../MDK-ARM/task_camera_utc.h)(0x638EF409)
-I (../MDK-ARM/task_camera_cali.h)(0x63A80DD8)
+I (../MDK-ARM/task_camera_cali.h)(0x63A86AD8)
 F (../Core/Src/bdma.c)(0x63A41499)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bdma.o --omf_browse stm32h730_gps_lidar_camera\bdma.crf --depend stm32h730_gps_lidar_camera\bdma.d)
 I (../Core/Inc/bdma.h)(0x63A41499)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -223,7 +223,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 F (../Core/Src/spi.c)(0x63A4149A)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\spi.o --omf_browse stm32h730_gps_lidar_camera\spi.crf --depend stm32h730_gps_lidar_camera\spi.d)
 I (../Core/Inc/spi.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -264,9 +264,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-F (../Core/Src/tim.c)(0x63A4149A)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\tim.o --omf_browse stm32h730_gps_lidar_camera\tim.crf --depend stm32h730_gps_lidar_camera\tim.d)
+F (../Core/Src/tim.c)(0x63A86AD7)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\tim.o --omf_browse stm32h730_gps_lidar_camera\tim.crf --depend stm32h730_gps_lidar_camera\tim.d)
 I (../Core/Inc/tim.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -307,9 +307,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-F (../Core/Src/usart.c)(0x63A80F6C)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usart.o --omf_browse stm32h730_gps_lidar_camera\usart.crf --depend stm32h730_gps_lidar_camera\usart.d)
+F (../Core/Src/usart.c)(0x63A86AD7)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usart.o --omf_browse stm32h730_gps_lidar_camera\usart.crf --depend stm32h730_gps_lidar_camera\usart.d)
 I (../Core/Inc/usart.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -350,8 +350,8 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-F (../Core/Src/stm32h7xx_it.c)(0x63A80F6D)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\stm32h7xx_it.o --omf_browse stm32h730_gps_lidar_camera\stm32h7xx_it.crf --depend stm32h730_gps_lidar_camera\stm32h7xx_it.d)
-I (../Core/Inc/main.h)(0x63A80F6E)
+F (../Core/Src/stm32h7xx_it.c)(0x63A86AD7)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\stm32h7xx_it.o --omf_browse stm32h730_gps_lidar_camera\stm32h7xx_it.crf --depend stm32h730_gps_lidar_camera\stm32h7xx_it.d)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -392,9 +392,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-I (../Core/Inc/stm32h7xx_it.h)(0x63A80F6E)
+I (../Core/Inc/stm32h7xx_it.h)(0x63A86AD7)
 F (../Core/Src/stm32h7xx_hal_msp.c)(0x63A4149C)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\stm32h7xx_hal_msp.o --omf_browse stm32h730_gps_lidar_camera\stm32h7xx_hal_msp.crf --depend stm32h730_gps_lidar_camera\stm32h7xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -519,24 +519,24 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 I (../USB_DEVICE/App/usbd_desc.h)(0x63A4149B)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
-I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A42455)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
+I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A86AD8)
 F (../USB_DEVICE/App/usbd_desc.c)(0x63A4149B)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_desc.o --omf_browse stm32h730_gps_lidar_camera\usbd_desc.crf --depend stm32h730_gps_lidar_camera\usbd_desc.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -581,16 +581,16 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 I (../USB_DEVICE/App/usbd_desc.h)(0x63A4149B)
-F (../USB_DEVICE/App/usbd_custom_hid_if.c)(0x63A80F6D)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_custom_hid_if.o --omf_browse stm32h730_gps_lidar_camera\usbd_custom_hid_if.crf --depend stm32h730_gps_lidar_camera\usbd_custom_hid_if.d)
-I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A42455)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
+F (../USB_DEVICE/App/usbd_custom_hid_if.c)(0x63A86AD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_custom_hid_if.o --omf_browse stm32h730_gps_lidar_camera\usbd_custom_hid_if.crf --depend stm32h730_gps_lidar_camera\usbd_custom_hid_if.d)
+I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A86AD8)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -634,11 +634,11 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 I (../MDK-ARM/BSP_GPIO.h)(0x638EF409)
-I (../MDK-ARM/bsp_tim.h)(0x63A80DD8)
+I (../MDK-ARM/bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (../MDK-ARM/struct_typedef.h)(0x638EF409)
-I (../MDK-ARM/task_camera_cali.h)(0x63A80DD8)
-F (../USB_DEVICE/Target/usbd_conf.c)(0x63A4149B)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_conf.o --omf_browse stm32h730_gps_lidar_camera\usbd_conf.crf --depend stm32h730_gps_lidar_camera\usbd_conf.d)
+I (../MDK-ARM/task_camera_cali.h)(0x63A86AD8)
+F (../USB_DEVICE/Target/usbd_conf.c)(0x63A86AD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_conf.o --omf_browse stm32h730_gps_lidar_camera\usbd_conf.crf --depend stm32h730_gps_lidar_camera\usbd_conf.d)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x633D7D2D)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h730xx.h)(0x633D7D2D)
 I (../Drivers/CMSIS/Include/core_cm7.h)(0x633D7D30)
@@ -680,15 +680,15 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
 F (../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c)(0x633D7D31)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\stm32h7xx_hal_pcd.o --omf_browse stm32h730_gps_lidar_camera\stm32h7xx_hal_pcd.crf --depend stm32h730_gps_lidar_camera\stm32h7xx_hal_pcd.d)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
@@ -1757,11 +1757,11 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c)(0x633D7D32)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_core.o --omf_browse stm32h730_gps_lidar_camera\usbd_core.crf --depend stm32h730_gps_lidar_camera\usbd_core.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -1808,11 +1808,11 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c)(0x633D7D32)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_ctlreq.o --omf_browse stm32h730_gps_lidar_camera\usbd_ctlreq.crf --depend stm32h730_gps_lidar_camera\usbd_ctlreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -1858,11 +1858,11 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c)(0x633D7D32)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_ioreq.o --omf_browse stm32h730_gps_lidar_camera\usbd_ioreq.crf --depend stm32h730_gps_lidar_camera\usbd_ioreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -1906,14 +1906,14 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 F (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c)(0x633D7D32)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\usbd_customhid.o --omf_browse stm32h730_gps_lidar_camera\usbd_customhid.crf --depend stm32h730_gps_lidar_camera\usbd_customhid.d)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -1959,7 +1959,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32
 F (.\bsp_delay.c)(0x638EF409)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_delay.o --omf_browse stm32h730_gps_lidar_camera\bsp_delay.crf --depend stm32h730_gps_lidar_camera\bsp_delay.d)
 I (bsp_delay.h)(0x638EF409)
 I (struct_typedef.h)(0x638EF409)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2000,10 +2000,10 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-F (.\bsp_tim.c)(0x63A80DD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_tim.o --omf_browse stm32h730_gps_lidar_camera\bsp_tim.crf --depend stm32h730_gps_lidar_camera\bsp_tim.d)
-I (bsp_tim.h)(0x63A80DD8)
+F (.\bsp_tim.c)(0x63A86AD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_tim.o --omf_browse stm32h730_gps_lidar_camera\bsp_tim.crf --depend stm32h730_gps_lidar_camera\bsp_tim.d)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2063,11 +2063,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x633D7D32)
 I (task_trigger_message.h)(0x638EF409)
 I (task_camera_utc.h)(0x638EF409)
-I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A42455)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
+I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A86AD8)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
@@ -2075,7 +2075,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32)
 F (.\bsp_spi.c)(0x638EF409)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_spi.o --omf_browse stm32h730_gps_lidar_camera\bsp_spi.crf --depend stm32h730_gps_lidar_camera\bsp_spi.d)
 I (bsp_spi.h)(0x638EF409)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2121,7 +2121,7 @@ I (../Core/Inc/spi.h)(0x63A4149A)
 F (.\bsp_lcd.c)(0x638EF911)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_lcd.o --omf_browse stm32h730_gps_lidar_camera\bsp_lcd.crf --depend stm32h730_gps_lidar_camera\bsp_lcd.d)
 I (bsp_lcd.h)(0x638EF409)
 I (tftlcd.h)(0x638EF409)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2163,9 +2163,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (struct_typedef.h)(0x638EF409)
-F (.\bsp_gpio.c)(0x63A811ED)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_gpio.o --omf_browse stm32h730_gps_lidar_camera\bsp_gpio.crf --depend stm32h730_gps_lidar_camera\bsp_gpio.d)
+F (.\bsp_gpio.c)(0x63A86AD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\bsp_gpio.o --omf_browse stm32h730_gps_lidar_camera\bsp_gpio.crf --depend stm32h730_gps_lidar_camera\bsp_gpio.d)
 I (BSP_GPIO.h)(0x638EF409)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2206,7 +2206,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
-I (bsp_tim.h)(0x63A80DD8)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (struct_typedef.h)(0x638EF409)
 I (../Core/Inc/gpio.h)(0x63A41497)
@@ -2226,7 +2226,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x633D7D32)
 F (.\tftlcd.c)(0x638EF409)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\tftlcd.o --omf_browse stm32h730_gps_lidar_camera\tftlcd.crf --depend stm32h730_gps_lidar_camera\tftlcd.d)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2277,7 +2277,7 @@ I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2319,7 +2319,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (gps.h)(0x638EF8BF)
-I (bsp_tim.h)(0x63A80DD8)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (struct_typedef.h)(0x638EF409)
 F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x633D7D32)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\croutine.o --omf_browse stm32h730_gps_lidar_camera\croutine.crf --depend stm32h730_gps_lidar_camera\croutine.d)
@@ -2467,7 +2467,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x633D7D32
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x633D7D32)
 F (.\task_trigger_message.c)(0x638F4FC3)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\task_trigger_message.o --omf_browse stm32h730_gps_lidar_camera\task_trigger_message.crf --depend stm32h730_gps_lidar_camera\task_trigger_message.d)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2510,7 +2510,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x633D7D31)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x633D7D31)
 I (gps.h)(0x638EF8BF)
 I (task_trigger_message.h)(0x638EF409)
-I (bsp_tim.h)(0x63A80DD8)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (struct_typedef.h)(0x638EF409)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x633D7D32)
@@ -2531,11 +2531,11 @@ I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (../Core/Inc/usart.h)(0x63A4149A)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 F (.\task_camera_utc.h)(0x638EF409)()
-F (.\task_camera_utc.c)(0x63A813B2)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\task_camera_utc.o --omf_browse stm32h730_gps_lidar_camera\task_camera_utc.crf --depend stm32h730_gps_lidar_camera\task_camera_utc.d)
+F (.\task_camera_utc.c)(0x63A86AD8)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\task_camera_utc.o --omf_browse stm32h730_gps_lidar_camera\task_camera_utc.crf --depend stm32h730_gps_lidar_camera\task_camera_utc.d)
 I (task_camera_utc.h)(0x638EF409)
-I (bsp_tim.h)(0x63A80DD8)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2591,11 +2591,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x633D7D32)
-I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A42455)
-I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x633D7D32)
+I (../USB_DEVICE/App/usbd_custom_hid_if.h)(0x63A86AD8)
+I (../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h)(0x63A86AD8)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x633D7D32)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x633D7D32)
-I (../USB_DEVICE/Target/usbd_conf.h)(0x63A80FE1)
+I (../USB_DEVICE/Target/usbd_conf.h)(0x63A86AD8)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x57F606B8)
@@ -2604,11 +2604,11 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x633D7D32
 I (gps.h)(0x638EF8BF)
 I (bsp_gpio.h)(0x638EF409)
 I (tftlcd.h)(0x638EF409)
-F (.\task_camera_cali.h)(0x63A80DD8)()
-F (.\task_camera_cali.c)(0x63A813E1)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\task_camera_cali.o --omf_browse stm32h730_gps_lidar_camera\task_camera_cali.crf --depend stm32h730_gps_lidar_camera\task_camera_cali.d)
-I (task_camera_cali.h)(0x63A80DD8)
+F (.\task_camera_cali.h)(0x63A86AD8)()
+F (.\task_camera_cali.c)(0x63AA88B1)(--c99 -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../MDK-ARM -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F-I.\RTE\_STM32H730_GPS_Lidar_Camera-ID:\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Keil\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32H730xx -DUSE_HAL_DRIVER -DSTM32H730xx-o stm32h730_gps_lidar_camera\task_camera_cali.o --omf_browse stm32h730_gps_lidar_camera\task_camera_cali.crf --depend stm32h730_gps_lidar_camera\task_camera_cali.d)
+I (task_camera_cali.h)(0x63A86AD8)
 I (BSP_GPIO.h)(0x638EF409)
-I (../Core/Inc/main.h)(0x63A80F6E)
+I (../Core/Inc/main.h)(0x63A86AD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x633D7D31)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x63A80F6E)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x633D7D31)
@@ -2653,7 +2653,7 @@ I (bsp_delay.h)(0x638EF409)
 I (struct_typedef.h)(0x638EF409)
 I (../Core/Inc/gpio.h)(0x63A41497)
 I (task_camera_utc.h)(0x638EF409)
-I (bsp_tim.h)(0x63A80DD8)
+I (bsp_tim.h)(0x63A86AD8)
 I (../Core/Inc/tim.h)(0x63A4149A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x633D7D32)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x633D7D32)

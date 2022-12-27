@@ -118,7 +118,7 @@ int main(void)
 	MX_USB_DEVICE_Init();
 	GPS_Init();
 	Prepare_LCD();
-
+	delay_init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
