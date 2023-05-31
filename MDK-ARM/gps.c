@@ -26,10 +26,12 @@ void GPS_Init()
 	HAL_UART_Receive_IT(&huart1, &rx_data, 1);
 }
 
+int uart_cb = 0;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+  uart_cb++;
 	if (rx_index == 0) message_arrrive_time = Since_PPS_Received_Time;
-	if((rx_data != '\n') && (rx_index < sizeof(rx_buffer))) 
+	if((rx_data != 0x0A) && (rx_index < sizeof(rx_buffer))) 
 	{
 		rx_buffer[rx_index++] = rx_data;
 	} 
@@ -77,8 +79,10 @@ int GPS_validate(char *nmeastr){
   return((checkcalcstr[0] == transmitted_checksum[0]) && (checkcalcstr[1] == transmitted_checksum[1])) ? 1 : 0 ;
 }
 
+int gps_parse;
 //½âÎö²ÎÊý
 void GPS_parse(char *GPSstrParse){
+  gps_parse++;
 	if (!strncmp(GPSstrParse, "$GPRMC", 6))
 	{
 		int i = 0;	
