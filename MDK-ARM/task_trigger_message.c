@@ -5,7 +5,6 @@
 #include "usart.h"
 #include <stdio.h>
 #include <string.h>
-#define COUNTOF(__BUFFER__)   (sizeof(__BUFFER__) / sizeof(*(__BUFFER__)))
 
 const int sizeGPRMC = 128;
 char Lidar_GPRMC[sizeGPRMC];
@@ -23,6 +22,7 @@ void trigger_message_task(void const *pvParameters)
 	{
 		if(flag_task_trigger_message)
 		{
+      calculated_check = 0;
 			taks_tm_loop++;
 			sprintf(Lidar_GPRMC,"$GPRMC,%0.3f,,,,,,,,%d,,,A*\n",(float)mt_local_gps->utc_time, mt_local_gps->Date);
 			for(int i = 0; i < sizeGPRMC; i++)
@@ -34,7 +34,7 @@ void trigger_message_task(void const *pvParameters)
 			}
 			sprintf(Lidar_GPRMC,"$GPRMC,%0.3f,,,,,,,,%d,,,A*%02X\n",(float)mt_local_gps->utc_time, mt_local_gps->Date, calculated_check);
 			flag_task_trigger_message=0;
-			HAL_UART_Transmit(&huart2, (uint8_t*)(Lidar_GPRMC),(COUNTOF(Lidar_GPRMC) - 1), 10);
+			HAL_UART_Transmit_IT(&huart2, (uint8_t*)(Lidar_GPRMC),sizeof(Lidar_GPRMC));
 		}
 		osDelay(1);
 	}

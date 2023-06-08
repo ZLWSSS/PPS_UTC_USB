@@ -14,7 +14,7 @@ uint64_t Lidar_IMU_Reset_Time;
 uint64_t Camera_Trigger_Time;
 uint8_t  Prepare_send_data = 0;
 
-uint32_t Set_Occupation = 1000;
+uint32_t Set_Occupation = 50000;
 uint32_t Message_interval = 60000;
 uint32_t Camera_Period = 20000;
 
