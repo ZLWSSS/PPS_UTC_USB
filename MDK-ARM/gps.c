@@ -23,6 +23,7 @@ void GPS_Init()
 	memset(comma_index, 0, 12);
 	memset(utc, 0, 7);
 	memset(date, 0, 7);
+	//GPS.ready = 0;
 	HAL_UART_Receive_IT(&huart1, &rx_data, 1);
 }
 
@@ -79,10 +80,8 @@ int GPS_validate(char *nmeastr){
   return((checkcalcstr[0] == transmitted_checksum[0]) && (checkcalcstr[1] == transmitted_checksum[1])) ? 1 : 0 ;
 }
 
-int gps_parse;
 //½âÎö²ÎÊý
 void GPS_parse(char *GPSstrParse){
-  gps_parse++;
 	if (!strncmp(GPSstrParse, "$GPRMC", 6))
 	{
 		int i = 0;	
@@ -109,6 +108,10 @@ void GPS_parse(char *GPSstrParse){
 				GPS.Date = atoi(date);
 				//! Update UTC time here, and hence update Since_UTC
 				Since_UTC = Since_PPS_Received_Time;
+				//memcpy(GPS.msg, rx_buffer, rx_index);
+				// add '\n' to message
+				//GPS.msg[rx_index] = '\n';
+				//GPS.ready = 1;
 			}
 		}
 	}

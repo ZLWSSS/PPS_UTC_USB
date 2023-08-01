@@ -1,23 +1,15 @@
 #ifndef _GPS_H_
+#define _GPS_H_
+
 #define GPSBUFSIZE  128       // GPS buffer size
 
 typedef struct{
-
-  int    utc_time;
-	char 	 Position_Status;
-	double Latitude;
-	char   Latitude_Direction;
-	double Longtitude;
-	char   Longtitude_Direction;
-	double Speed_Kn;
-	double Track_true;
+    int utc_time;
 	int    Date;
-	float  Mag_Var;
-	char   var_dir;
-	char   Mode_ind;
+	//uint8_t msg[GPSBUFSIZE];
+	//uint8_t ready;  // indicate whether the GPS message is ready 0 -- not ready, 1 -- ready
 } GPS_t;
 
-extern uint8_t rx_data;
 
 void GPS_Init(void);
 void GSP_USBPrint(char *data);

@@ -59,7 +59,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	//timer4:enbale the camera: 20hz
 	else if(htim->Instance == TIM4)
 	{
-		if (!flag_camera_trigger)
+		if (!flag_camera_trigger && enable_auto_send)
 		{
 			HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
 			Camera_Trigger_Time = Since_First_PPS_Received_Time;
