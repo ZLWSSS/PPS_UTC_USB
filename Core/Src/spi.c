@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -25,7 +25,6 @@
 /* USER CODE END 0 */
 
 SPI_HandleTypeDef hspi6;
-DMA_HandleTypeDef hdma_spi6_tx;
 
 /* SPI6 init function */
 void MX_SPI6_Init(void)
@@ -105,24 +104,6 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     GPIO_InitStruct.Alternate = GPIO_AF8_SPI6;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    /* SPI6 DMA Init */
-    /* SPI6_TX Init */
-    hdma_spi6_tx.Instance = BDMA_Channel0;
-    hdma_spi6_tx.Init.Request = BDMA_REQUEST_SPI6_TX;
-    hdma_spi6_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
-    hdma_spi6_tx.Init.PeriphInc = DMA_PINC_DISABLE;
-    hdma_spi6_tx.Init.MemInc = DMA_MINC_ENABLE;
-    hdma_spi6_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
-    hdma_spi6_tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
-    hdma_spi6_tx.Init.Mode = DMA_NORMAL;
-    hdma_spi6_tx.Init.Priority = DMA_PRIORITY_MEDIUM;
-    if (HAL_DMA_Init(&hdma_spi6_tx) != HAL_OK)
-    {
-      Error_Handler();
-    }
-
-    __HAL_LINKDMA(spiHandle,hdmatx,hdma_spi6_tx);
-
   /* USER CODE BEGIN SPI6_MspInit 1 */
 
   /* USER CODE END SPI6_MspInit 1 */
@@ -146,8 +127,6 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_3|GPIO_PIN_5);
 
-    /* SPI6 DMA DeInit */
-    HAL_DMA_DeInit(spiHandle->hdmatx);
   /* USER CODE BEGIN SPI6_MspDeInit 1 */
 
   /* USER CODE END SPI6_MspDeInit 1 */

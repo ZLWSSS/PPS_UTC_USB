@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -31,8 +31,6 @@
 
 /* USER CODE BEGIN INCLUDE */
 int8_t USBD_CUSTOM_HID_SendReport_HS(uint8_t *report, uint16_t len);
-extern uint32_t usb_rx_cmd;
-	 
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY

@@ -1,0 +1,580 @@
+/*********************************************************************
+*                   (c) SEGGER Microcontroller GmbH                  *
+*                        The Embedded Experts                        *
+*                           www.segger.com                           *
+**********************************************************************
+
+----------------------------------------------------------------------
+Licensing information
+For use with Embedded Studio only.
+A valid license for Embedded Studio is required.
+-------------------------- END-OF-HEADER -----------------------------
+*/
+# 1 "./asmdefs_arm.ah"
+# 10 "./asmdefs_arm.ah"
+#ifndef __SEGGER_RTL_ASMDEFS_ARM__
+#define __SEGGER_RTL_ASMDEFS_ARM__ 
+
+#define __SEGGER_RTL_EXCLUDE_STATIC_FUNCTIONS 
+
+#include "__SEGGER_RTL_ConfDefaults.h"
+
+#if __SEGGER_RTL_BYTE_ORDER < 0
+
+#define xl r0
+#define xh r1
+#define yl r2
+#define yh r3
+#define zl r0
+#define zh r1
+
+#else
+
+#define xl r1
+#define xh r0
+#define yl r3
+#define yh r2
+#define zl r1
+#define zh r0
+
+#endif
+
+.macro GLOBAL_RODATA name, align
+#if __SEGGER_RTL_OPTIMIZE >= 4
+       .section .data.libc.\name, "a", %progbits
+#else
+       .section .rodata.libc.\name, "a", %progbits
+#endif
+       .balign \align
+       .type \name, object
+       .global \name
+\name:
+.endm
+
+.macro LOCAL_RODATA name, align
+#if __SEGGER_RTL_OPTIMIZE >= 4
+       .section .data.libc.\name, "a", %progbits
+#else
+       .section .rodata.libc.\name, "a", %progbits
+#endif
+       .balign \align
+       .type \name, object
+\name:
+.endm
+
+.macro END_RODATA name
+       .size \name, .-\name
+.endm
+
+.macro GLOBAL_LABEL name
+  .weak \name
+#if __SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_ARM
+  .thumb_func
+#else
+  .type \name, function
+#endif
+\name:
+.endm
+
+
+
+
+
+.macro ARM_GLOBAL_FUNC name
+  .section .text.libc.\name, "ax", %progbits
+  .syntax unified
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  .arm
+  .balign 4
+#else
+  .thumb
+#if __SEGGER_RTL_OPTIMIZE < 0
+  .balign 2
+#else
+  .balign 4
+#endif
+  .thumb_func
+#endif
+  .weak \name
+  .type \name, function
+\name:
+.endm
+
+.macro THUMB_GLOBAL_FUNC name
+  .section .text.libc.\name, "ax", %progbits
+  .syntax unified
+  .thumb
+#if __SEGGER_RTL_OPTIMIZE < 0
+  .balign 2
+#else
+  .balign 4
+#endif
+  .thumb_func
+  .weak \name
+  .type \name, function
+\name:
+.endm
+
+.macro ARM_LOCAL_FUNC name
+  .section .text.libc.\name, "ax", %progbits
+  .syntax unified
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  .arm
+  .balign 4
+#else
+  .thumb
+  .thumb_func
+  .balign 2
+#endif
+  .type \name, function
+\name:
+.endm
+
+.macro END_FUNC name
+  .size \name,.-\name
+.endm
+
+.macro ALIAS_LABEL name
+#if __SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_ARM
+  .thumb_func
+#endif
+  .weak \name
+  .type \name, function
+\name:
+.endm
+
+.macro LOCAL_ENTRY name
+  .type \name, function
+\name:
+.endm
+
+.macro la reg, expr
+#if __SEGGER_RTL_CORE_HAS_MOVW_MOVT
+  movw \reg, :lower16:(\expr)
+  movt \reg, :upper16:(\expr)
+#else
+  ldr \reg, =\expr
+#endif
+.endm
+
+.macro RET1 reg1
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, lr}
+  bx lr
+#else
+  pop {\reg1}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, pc}
+#endif
+.endm
+
+
+.macro RET1_r3 reg1
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, lr}
+  bx lr
+#else
+  pop {\reg1}
+  mov ip, r3
+  pop {r3}
+  mov lr, r3
+  mov r3, ip
+  bx lr
+#endif
+#else
+  pop {\reg1, pc}
+#endif
+.endm
+
+
+.macro RET2 reg1, reg2
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, \reg2, pc}
+#endif
+.endm
+
+
+.macro RET2_r3 reg1, reg2
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2}
+  mov ip, r3
+  pop {r3}
+  mov lr, r3
+  mov r3, ip
+  bx lr
+#endif
+#else
+  pop {\reg1, \reg2, pc}
+#endif
+.endm
+
+
+.macro RET3_r3 reg1, reg2, reg3
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3}
+  mov ip, r3
+  pop {r3}
+  mov lr, r3
+  mov r3, ip
+  bx lr
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, pc}
+#endif
+.endm
+
+.macro RET3 reg1, reg2, reg3, reg4
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, pc}
+#endif
+.endm
+
+.macro RET4 reg1, reg2, reg3, reg4
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, \reg4, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3, \reg4}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, pc}
+#endif
+.endm
+
+
+.macro RET4_r3 reg1, reg2, reg3, reg4
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, \reg4, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3, \reg4}
+  mov ip, r3
+  pop {r3}
+  mov lr, r3
+  mov r3, ip
+  bx lr
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, pc}
+#endif
+.endm
+
+.macro RET5 reg1, reg2, reg3, reg4, reg5
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5, pc}
+#endif
+.endm
+
+.macro RET6 reg1, reg2, reg3, reg4, reg5, reg6
+#if __ARM_ARCH == 4
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5, \reg6, lr}
+  bx lr
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5, \reg6}
+  pop {r3}
+  bx r3
+#endif
+#else
+  pop {\reg1, \reg2, \reg3, \reg4, \reg5, \reg6, pc}
+#endif
+.endm
+
+.macro RET2cc cond, reg1, reg2
+#if __ARM_ARCH == 4
+  pop\cond {\reg1, \reg2, lr}
+  bx\cond lr
+#else
+  pop\cond {\reg1, \reg2, pc}
+#endif
+.endm
+
+.macro CSETx reg, cond
+#if __SEGGER_RTL_CORE_HAS_CSINC_CSNEG_CSINV
+  cset \reg, \cond
+#else
+  ite \cond
+  mov\cond \reg, #1
+ .ifc \cond,eq
+  movne \reg, #0
+ .endif
+ .ifc \cond,ne
+  moveq \reg, #0
+ .endif
+ .ifc \cond,lt
+  movge \reg, #0
+ .endif
+ .ifc \cond,ge
+  movlt \reg, #0
+ .endif
+ .ifc \cond,le
+  movgt \reg, #0
+ .endif
+ .ifc \cond,gt
+  movle \reg, #0
+ .endif
+ .ifc \cond,mi
+  movpl \reg, #0
+ .endif
+ .ifc \cond,pl
+  movmi \reg, #0
+ .endif
+ .ifc \cond,cc
+  movcs \reg, #0
+ .endif
+ .ifc \cond,cs
+  movcc \reg, #0
+ .endif
+ .ifc \cond,vs
+  movvc \reg, #0
+ .endif
+ .ifc \cond,vc
+  movvs \reg, #0
+ .endif
+ .ifc \cond,ls
+  movhi \reg, #0
+ .endif
+#endif
+.endm
+
+.macro CBZx reg, label
+#if __SEGGER_RTL_CORE_HAS_CBZ_CBNZ
+  cbz \reg, \label
+#else
+  cmp \reg, #0
+  beq \label
+#endif
+.endm
+
+.macro CBNZx reg, label
+#if __SEGGER_RTL_CORE_HAS_CBZ_CBNZ
+  cbnz \reg, \label
+#else
+  cmp \reg, #0
+  bne \label
+#endif
+.endm
+
+.macro UXTBs regd, regs
+#if __SEGGER_RTL_CORE_HAS_UXT_SXT
+  uxtb \regd, \regs
+#elif __SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16
+  and \regd, \regs, #0xFF
+#else
+  lsls \regd, \regs, #24
+  lsrs \regd, \regd, #24
+#endif
+.endm
+
+.macro UXTHs regd, regs
+#if __SEGGER_RTL_CORE_HAS_UXT_SXT
+  uxth \regd, \regs
+#else
+  lsls \regd, \regs, #16
+  lsrs \regd, \regd, #16
+#endif
+.endm
+
+.macro BLXx name, reg
+#if __SEGGER_RTL_CORE_HAS_BLX_REG
+  blx \reg
+#else
+  bl \name
+#endif
+.endm
+
+.macro li reg, expr
+ .if (__SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_T32) && ((((\expr) & 0xff) * 0x01010101) == (\expr))
+
+    mov \reg, #(\expr)
+ .elseif __SEGGER_RTL_CORE_HAS_MOVW_MOVT
+    movw \reg, #:lower16:(\expr)
+   .if ((\expr) & 0xffff0000)
+      movt \reg, #:upper16:(\expr)
+   .endif
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && (((\expr) & 0x00ffffff) == 0)
+   mov \reg, (\expr)
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && (((\expr) & 0xff00ffff) == 0)
+   mov \reg, (\expr)
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && (((\expr) & 0xffff00ff) == 0)
+   mov \reg, #(\expr)
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && ((\expr) <= 0xff)
+   mov \reg, #(\expr)
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && (((\expr) & 0xffff) == 0)
+   mov \reg, #(\expr) & 0xff000000
+   orr \reg, \reg, #(\expr) & 0x00ff0000
+ .elseif (__SEGGER_RTL_TARGET_ISA != __SEGGER_RTL_ISA_T16) && (((\expr) & 0xffff0000) == 0)
+   mov \reg, #(\expr) & 0xff00
+   orr \reg, \reg, #(\expr) & 0x00ff
+ .else
+   ldr \reg, =(\expr)
+ .endif
+.endm
+
+.macro INSN_ALIGN
+#if __SEGGER_RTL_TARGET_ISA == __SEGGER_RTL_ISA_ARM
+ .balign 4
+#else
+ .balign 2
+#endif
+.endm
+
+.macro NORM32I reg, cnt, tmp
+#if __SEGGER_RTL_CORE_HAS_CLZ
+
+
+        clz \tmp, \reg
+        adds \cnt, \cnt, \tmp
+        lsls \reg, \reg, \tmp
+
+#else
+
+
+        cmp \reg, #0x10000
+        itt cc
+        addcc \cnt, \cnt, #16
+        lslcc \reg, \reg, #16
+
+
+        cmp \reg, #0x01000000
+        itt cc
+        addcc \cnt, \cnt, #8
+        lslcc \reg, \reg, #8
+
+
+        cmp \reg, #0x10000000
+        itt cc
+        addcc \cnt, \cnt, #4
+        lslcc \reg, \reg, #4
+
+
+
+        tst \reg, #0xc0000000
+        itt eq
+        addeq \cnt, \cnt, #2
+        lslseq \reg, \reg, #2
+        itt pl
+        lslpl \reg, \reg, #1
+        addpl \cnt, \cnt, #1
+#endif
+.endm
+
+.macro NORM32D dst, src, cnt, tmp, flags
+#if __SEGGER_RTL_CORE_HAS_CLZ
+
+
+        clz \tmp, \src
+       .ifc \flags,f_exp
+        lsls \dst, \src, \tmp
+        subs \cnt, \cnt, \tmp
+       .else
+        subs \cnt, \cnt, \tmp
+        lsls \dst, \src, \tmp
+       .endif
+#else
+
+       .ifnc \src,\dst
+        movs \dst,\src
+       .endif
+
+
+        cmp \dst, #0x10000
+        itt cc
+        subcc \cnt, \cnt, #16
+        lslcc \dst, \dst, #16
+
+
+        cmp \dst, #0x01000000
+        itt cc
+        subcc \cnt, \cnt, #8
+        lslcc \dst, \dst, #8
+
+
+        cmp \dst, #0x10000000
+        itt cc
+        subcc \cnt, \cnt, #4
+        lslcc \dst, \dst, #4
+
+
+
+        tst \dst, #0xc0000000
+        itt eq
+        subeq \cnt, \cnt, #2
+        lslseq \dst, \dst, #2
+        itt pl
+        lslpl \dst, \dst, #1
+        subpl \cnt, \cnt, #1
+
+       .ifc \flags,f_exp
+        cmp \cnt, #0
+       .endif
+#endif
+.endm
+
+.macro NORM32 dst, src, cnt
+#if __SEGGER_RTL_CORE_HAS_CLZ
+
+
+        clz \cnt, \src
+        lsls \dst, \src, \cnt
+
+#else
+
+
+       .ifc \src,\dst
+        movs \cnt, #0
+        NORM32I \src, \cnt, unused
+       .else
+        movs \dst, \src
+        movs \cnt, #0
+        NORM32I \dst, \cnt, unused
+       .endif
+
+#endif
+.endm
+
+#endif

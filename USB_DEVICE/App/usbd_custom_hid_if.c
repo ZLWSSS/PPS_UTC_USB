@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -22,9 +22,9 @@
 #include "usbd_custom_hid_if.h"
 
 /* USER CODE BEGIN INCLUDE */
-#include "BSP_GPIO.h" 
-#include "bsp_tim.h"
-#include "task_camera_cali.h"
+#include "RTOS.h"
+#include "camera_trigger_task.h"
+#include "lidar_message_task.h"
 uint32_t usb_rx_cmd;
 /* USER CODE END INCLUDE */
 
@@ -110,7 +110,7 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_HS[USBD_CUSTOM_HID_REPORT_DES
   0x75, 0x08,                    //   REPORT_SIZE (8)
   0x91, 0x00,                    //   OUTPUT (Data,Ary,Abs)
   /* USER CODE END 1 */
-   0xC0    /*     END_COLLECTION             */
+  0xC0    /*     END_COLLECTION             */
 };
 /* USER CODE BEGIN PRIVATE_VARIABLES */
 
@@ -201,24 +201,24 @@ static int8_t CUSTOM_HID_OutEvent_HS(uint8_t event_idx, uint8_t state)
   {
     return -1;
   }
-	
-	USBD_CUSTOM_HID_HandleTypeDef *hhid = (USBD_CUSTOM_HID_HandleTypeDef *)(hUsbDeviceHS.pClassData);
-	usb_rx_cmd = (hhid->Report_buf[3] << 24) + (hhid->Report_buf[2] << 16) + (hhid->Report_buf[1] << 8) + (hhid->Report_buf[0]);
-	switch(usb_rx_cmd)
-	{
-		case 0:
-			trigger_imu();
-			break;
-		case 1:
+
+  USBD_CUSTOM_HID_HandleTypeDef *hhid = (USBD_CUSTOM_HID_HandleTypeDef *)(hUsbDeviceHS.pClassData);
+  usb_rx_cmd = (hhid->Report_buf[3] << 24) + (hhid->Report_buf[2] << 16) + (hhid->Report_buf[1] << 8) + (hhid->Report_buf[0]);
+  switch(usb_rx_cmd)
+  {
+    case 0:
+      trigger_imu();
+      break;
+    case 1:
       if (!enable_auto_send)
-			  trigger_camera();
-			break;
-		case 2:
-			enable_auto_send = 1;
-			break;
-		default:
-			break;
-	}
+        trigger_camera();
+      break;
+    case 2:
+      enable_auto_send = 1;
+      break;
+    default:
+      break;
+  }
   return (USBD_OK);
   /* USER CODE END 10 */
 }
