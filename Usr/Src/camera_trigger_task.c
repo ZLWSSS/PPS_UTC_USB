@@ -41,10 +41,11 @@ void camera_utc_task(void)
   while(1)
   {
     cam_task_event = OS_TASKEVENT_GetBlocked(EVENT_CAMERA);
+    Time_Camera_Send = OS_TIME_Get_us64();
     if(trig_imu_flag)
     {
       HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_SET);
-      Time_Camera_Send = OS_TIME_Get_us64();
+      //Time_Camera_Send = OS_TIME_Get_us64();
       delay_ms(10);
       HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_RESET);
       trig_imu_flag = 0;
@@ -52,7 +53,7 @@ void camera_utc_task(void)
     else if(trig_cam_flag)
     {
       HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
-      Time_Camera_Send = OS_TIME_Get_us64();
+      //Time_Camera_Send = OS_TIME_Get_us64();
       delay_ms(10);
       HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
       trig_cam_flag = 0;

@@ -5,25 +5,54 @@
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
- <FrameBuffer/>
- <Memory1/>
- <Memory2/>
- <Memory3/>
- <Memory4/>
+ <FrameBuffer>
+  <FrameBufferWindow width="16843009" keepAspectRatio="0" zoomToFitWindow="0" addressSpace="" format="0" height="16843009" autoEvaluate="0" scaleFactor="1" refreshPeriod="0" name="STM32H730_GPS_Lidar_Camera_Debug Internal" addressText="" accessByDisplayWidth="0"/>
+ </FrameBuffer>
+ <Memory1>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="STM32H730_GPS_Lidar_Camera_Debug Internal" sizeText="" addressText=""/>
+ </Memory1>
+ <Memory2>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="STM32H730_GPS_Lidar_Camera_Debug Internal" sizeText="" addressText=""/>
+ </Memory2>
+ <Memory3>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="STM32H730_GPS_Lidar_Camera_Debug Internal" sizeText="" addressText=""/>
+ </Memory3>
+ <Memory4>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="STM32H730_GPS_Lidar_Camera_Debug Internal" sizeText="" addressText=""/>
+ </Memory4>
  <Project>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Core"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Core;Src"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Core;Startup"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS;embOS"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS;embOS;Include"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS;embOS;Include;GCC"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS;embOS;Library"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Middlewares;Third_Party;SEGGER_RTOS_embOS;embOS;Source"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;SEGGER"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;USB_DEVICE"/>
+  <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;USB_DEVICE;App"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Usr"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Usr;Inc"/>
   <ProjectSessionItem path="STM32H730_GPS_Lidar_Camera;STM32H730_GPS_Lidar_Camera;Usr;Src"/>
  </Project>
- <Register1/>
- <Register2/>
- <Register3/>
- <Register4/>
+ <Register1>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="STM32H730_GPS_Lidar_Camera_Debug Internal" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register1>
+ <Register2>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="STM32H730_GPS_Lidar_Camera_Debug Internal" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register2>
+ <Register3>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="STM32H730_GPS_Lidar_Camera_Debug Internal" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register3>
+ <Register4>
+  <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="STM32H730_GPS_Lidar_Camera_Debug Internal" decimalNodes="" octalNodes="" unsignedNodes=""/>
+ </Register4>
  <Threads>
   <ThreadsWindow showLists=""/>
  </Threads>
@@ -43,12 +72,12 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="74" y="119" useTextEdit="1" path="Core/Src/main.c" left="0" top="111" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/OS_Error.c" left="0" top="33" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Core/Src/main.c" left="0" top="114" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="309" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/OS_Error.c" left="0" top="293" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="5" y="88" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/GCC/OS_ThreadSafe.c" left="0" top="71" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="22" y="177" useTextEdit="1" path="Core/Src/system_stm32h7xx.c" left="0" top="177" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="2684" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Include/GCC/RTOS.h" left="0" top="2674" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="131" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/RTOSInit.c" left="0" top="131" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="18" y="23" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Include/GCC/RTOS.h" left="0" top="64" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="181" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/RTOSInit.c" left="0" top="165" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="8" y="56" useTextEdit="1" path="Usr/Src/gps.c" left="0" top="41" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="17" y="10" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="Usr/Inc/gps.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Inc/gps.h" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 7.30/include/float.h" left="0" top="68" codecName="Default"/>
@@ -61,14 +90,14 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="325" useTextEdit="1" path="USB_DEVICE/App/usbd_desc.c" left="0" top="306" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="336" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="emRun/convops.c" left="0" top="322" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="33" y="123" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Core/Src/gpio.c" left="0" top="94" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="65" useTextEdit="1" path="Usr/Src/camera_trigger_task.c" left="0" top="29" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="59" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c" path="Usr/Src/camera_trigger_task.c" left="0" selected="1" top="35" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/usart.c" left="0" top="219" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="55" y="130" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" selected="1" top="105" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="228" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" top="144" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="31" y="18" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="Usr/Inc/lidar_message_task.h" left="0" top="3" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="11" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/camera_trigger_task.c" path="Usr/Inc/camera_trigger_task.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="11" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/camera_trigger_task.c" path="Usr/Inc/camera_trigger_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="emRun/locales.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="10" y="55" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 7.30/include/string.h" left="0" top="39" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="68" y="93" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.c" left="0" top="90" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="213" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.c" left="0" top="170" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="68" y="32" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.h" left="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="USB_DEVICE/App/usbd_desc.h" left="0" top="36" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="47" y="77" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c" path="USB_DEVICE/Target/usbd_conf.h" left="0" top="65" codecName="Default"/>
@@ -77,7 +106,10 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/stm32h7xx_hal_timebase_tim.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7" useTextEdit="1" path="Usr/Inc/tftlcd.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="406" useTextEdit="1" path="Usr/Inc/tft_font.h" left="0" top="368" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="3" useTextEdit="1" path="Usr/Src/tftlcd.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="3" useTextEdit="1" path="Usr/Src/tftlcd.c" left="0" top="9" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Usr/Src/bsp_delay.c" left="0" top="33" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="4" useTextEdit="1" path="Usr/Inc/bsp_delay.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Usr/Src/bsp_lcd.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="STM32H730_GPS_Lidar_Camera" fileDialogDefaultFilter="*.*" autoConnectTarget="J-Link" buildConfiguration="Debug Internal" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="E:/ES_Project/PTC/Usr/Inc" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="STM32H730_GPS_Lidar_Camera" fileDialogDefaultFilter="*.*" autoConnectTarget="J-Link" buildConfiguration="Debug Internal" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/github_repo/PPS_UTC_USB/H7_Support" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
