@@ -128,7 +128,7 @@ void GPS_Init(void)
   OS_TIMER_Create(&Timer_Check, Timer_Check_CB, 14); //tick once per 14 ms
   OS_TIMER_Start(&Timer_Check);
   OS_TIMER_Create(&Timer_Fake_PPS, Timer_FakePPS_CB, 1000);
-  OS_TIMER_Create(&Timer_Trig_Cam, Timer_Trig_Cam_CB, 30); 
+  OS_TIMER_Create(&Timer_Trig_Cam, Timer_Trig_Cam_CB, 50); 
 }
 
 uint8_t GPS_validate(char *nmeastr)

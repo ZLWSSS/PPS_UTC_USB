@@ -22,8 +22,6 @@
 # Compiled Static libraries
 *.lai
 *.la
-*.a
-*.lib
 
 # Executables
 *.exe
@@ -31,3 +29,5 @@
 *.app
 build
 cmake-debug
+Debug Internal
+Release Internal

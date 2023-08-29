@@ -63,7 +63,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="33" y="123" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Core/Src/gpio.c" left="0" top="107" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="2" y="65" useTextEdit="1" path="Usr/Src/camera_trigger_task.c" left="0" top="45" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/usart.c" left="0" top="219" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="298" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" top="294" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="55" y="130" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" selected="1" top="117" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="31" y="18" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="Usr/Inc/lidar_message_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="23" y="11" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/camera_trigger_task.c" path="Usr/Inc/camera_trigger_task.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="emRun/locales.c" left="0" top="0" codecName="Default"/>
@@ -75,7 +75,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="43" y="299" useTextEdit="1" path="Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c" left="0" top="285" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="55" y="47" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c" path="Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h" left="0" top="43" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/stm32h7xx_hal_timebase_tim.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7" useTextEdit="1" path="Usr/Inc/tftlcd.h" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7" useTextEdit="1" path="Usr/Inc/tftlcd.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="406" useTextEdit="1" path="Usr/Inc/tft_font.h" left="0" top="384" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="16" y="3" useTextEdit="1" path="Usr/Src/tftlcd.c" left="0" top="0" codecName="Default"/>
  </Files>
