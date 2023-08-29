@@ -185,6 +185,7 @@ void GPS_parse(char *GPSstrParse)
       memcpy(date,&(GPSstrParse[comma_index[8]+1]), 6);
       GPS.utc_time = atoi(utc);
       GPS.Date = atoi(date);
+      GPS.time = Time_PPS_IN_us;
       //! Update UTC time here, and hence update Since_UTC
     }
   }
@@ -203,6 +204,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
     if(GPS_validate(rx_buffer))
     {
       GPS_parse(rx_buffer);
+      
       Usart_Data_Freshed = 1;
     }	
     memset(rx_buffer, 0, sizeof(rx_buffer));

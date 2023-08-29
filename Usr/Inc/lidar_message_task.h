@@ -13,6 +13,7 @@
 typedef struct{
     int utc_time;
     int Date;
+    uint64_t time;
 } GPS_t;
 
 extern uint64_t Since_UTC;

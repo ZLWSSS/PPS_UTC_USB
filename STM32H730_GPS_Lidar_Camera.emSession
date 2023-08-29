@@ -72,11 +72,11 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Core/Src/main.c" left="0" top="114" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="309" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/OS_Error.c" left="0" top="293" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Core/Src/main.c" left="0" top="76" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="309" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/OS_Error.c" left="0" top="275" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="5" y="88" useTextEdit="1" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/GCC/OS_ThreadSafe.c" left="0" top="71" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="22" y="177" useTextEdit="1" path="Core/Src/system_stm32h7xx.c" left="0" top="177" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="18" y="23" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Include/GCC/RTOS.h" left="0" top="64" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="18" y="23" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Include/GCC/RTOS.h" left="0" top="23" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="181" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/RTOSInit.c" left="0" top="165" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="8" y="56" useTextEdit="1" path="Usr/Src/gps.c" left="0" top="41" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="17" y="10" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="Usr/Inc/gps.h" left="0" top="0" codecName="Default"/>
@@ -89,15 +89,15 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="79" y="2663" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/stm32h7xx_it.c" path="Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" left="0" top="2654" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="325" useTextEdit="1" path="USB_DEVICE/App/usbd_desc.c" left="0" top="306" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="336" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="emRun/convops.c" left="0" top="322" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="123" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Core/Src/gpio.c" left="0" top="94" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="59" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c" path="Usr/Src/camera_trigger_task.c" left="0" selected="1" top="35" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/usart.c" left="0" top="219" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="228" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" top="144" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="31" y="18" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="Usr/Inc/lidar_message_task.h" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="123" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Core/Src/gpio.c" left="0" top="81" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="43" y="63" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c" path="Usr/Src/camera_trigger_task.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="231" useTextEdit="1" path="Core/Src/usart.c" left="0" top="200" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="11" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="15" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/Usr/Src/lidar_message_task.c" path="Usr/Inc/lidar_message_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="23" y="11" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/camera_trigger_task.c" path="Usr/Inc/camera_trigger_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="emRun/locales.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="10" y="55" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/lidar_message_task.c" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 7.30/include/string.h" left="0" top="39" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="213" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.c" left="0" top="170" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="213" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.c" left="0" top="174" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="68" y="32" useTextEdit="1" path="USB_DEVICE/App/usbd_custom_hid_if.h" left="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="USB_DEVICE/App/usbd_desc.h" left="0" top="36" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="47" y="77" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c" path="USB_DEVICE/Target/usbd_conf.h" left="0" top="65" codecName="Default"/>
@@ -106,10 +106,10 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Core/Src/stm32h7xx_hal_timebase_tim.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7" useTextEdit="1" path="Usr/Inc/tftlcd.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="406" useTextEdit="1" path="Usr/Inc/tft_font.h" left="0" top="368" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="3" useTextEdit="1" path="Usr/Src/tftlcd.c" left="0" top="9" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Usr/Src/bsp_delay.c" left="0" top="33" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="3" useTextEdit="1" path="Usr/Src/tftlcd.c" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="76" useTextEdit="1" path="Usr/Src/bsp_delay.c" left="0" top="38" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="15" y="4" useTextEdit="1" path="Usr/Inc/bsp_delay.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Usr/Src/bsp_lcd.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="STM32H730_GPS_Lidar_Camera" fileDialogDefaultFilter="*.*" autoConnectTarget="J-Link" buildConfiguration="Debug Internal" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/github_repo/PPS_UTC_USB/H7_Support" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="STM32H730_GPS_Lidar_Camera" fileDialogDefaultFilter="*.*" autoConnectTarget="J-Link" buildConfiguration="Debug Internal" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/github_repo/PPS_UTC_USB/H7_Support" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

@@ -59,7 +59,7 @@ void camera_utc_task(void)
       trig_cam_flag = 0;
     }
     OS_INT_Disable();
-    Since_UTC = Time_Camera_Send - Time_PPS_IN_us;
+    Since_UTC = Time_Camera_Send - local_gps_data->time;
     utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
     utc_real_data.real_utc = local_gps_data->utc_time;
     utc_real_data.date_utc = local_gps_data->Date;
