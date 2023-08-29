@@ -102,7 +102,7 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
   OS_Init();
-  OS_InitHW();
+  
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -113,6 +113,7 @@ int main(void)
   MX_SPI6_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  OS_InitHW();
 #ifdef DEBUG
   SEGGER_SYSVIEW_Conf();
 #endif

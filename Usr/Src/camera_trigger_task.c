@@ -1,6 +1,7 @@
 #include "camera_trigger_task.h"
 #include "lidar_message_task.h"
 #include "usbd_custom_hid_if.h"
+#include "bsp_delay.h"
 
 typedef struct{
   int real_utc;
@@ -16,6 +17,8 @@ usb_utc_data utc_real_data;
 const GPS_t* local_gps_data;
 OS_TASK* camera_report_taskid;
 static OS_U64 Time_Camera_Send;
+volatile uint8_t trig_cam_flag = 0;
+volatile uint8_t trig_imu_flag = 0;
 
 static uint32_t data_checksum(uint32_t* data_to_check, uint8_t length)
 {
@@ -30,6 +33,7 @@ static uint32_t data_checksum(uint32_t* data_to_check, uint8_t length)
 void camera_utc_task(void)
 {
   OS_TASK_Delay(500);
+  delay_init();
   local_gps_data = get_gps_data();
   memset(&utc_real_data, 0, sizeof(usb_utc_data));
   camera_report_taskid = OS_TASK_GetID();
@@ -37,7 +41,22 @@ void camera_utc_task(void)
   while(1)
   {
     cam_task_event = OS_TASKEVENT_GetBlocked(EVENT_CAMERA);
-    Time_Camera_Send = OS_TIME_Get_us();
+    if(trig_imu_flag)
+    {
+      HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_SET);
+      Time_Camera_Send = OS_TIME_Get_us64();
+      delay_ms(10);
+      HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_RESET);
+      trig_imu_flag = 0;
+    }
+    else if(trig_cam_flag)
+    {
+      HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
+      Time_Camera_Send = OS_TIME_Get_us64();
+      delay_ms(10);
+      HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
+      trig_cam_flag = 0;
+    }
     OS_INT_Disable();
     Since_UTC = Time_Camera_Send - Time_PPS_IN_us;
     utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
@@ -51,18 +70,13 @@ void camera_utc_task(void)
 
 void trigger_camera(void)
 {
-  HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
   OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
-
-  OS_TASK_Delay(5);
-  HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
+  trig_cam_flag = 1;
 }
 
 void trigger_imu(void)
 {
-  HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_SET);
   OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
-  OS_TASK_Delay(5);
-  HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_RESET);
+  trig_imu_flag = 1;
 }
 

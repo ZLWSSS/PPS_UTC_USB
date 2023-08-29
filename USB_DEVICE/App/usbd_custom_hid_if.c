@@ -195,7 +195,7 @@ static int8_t CUSTOM_HID_OutEvent_HS(uint8_t event_idx, uint8_t state)
   /* USER CODE BEGIN 10 */
   UNUSED(event_idx);
   UNUSED(state);
-
+  OS_INT_Enter();
     /* Start next USB packet transfer once data processing is completed */
   if (USBD_CUSTOM_HID_ReceivePacket(&hUsbDeviceHS) != (uint8_t)USBD_OK)
   {
@@ -219,6 +219,7 @@ static int8_t CUSTOM_HID_OutEvent_HS(uint8_t event_idx, uint8_t state)
     default:
       break;
   }
+  OS_INT_Leave();
   return (USBD_OK);
   /* USER CODE END 10 */
 }

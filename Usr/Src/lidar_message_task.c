@@ -7,6 +7,7 @@
 #include "RTOS.h"
 #include "camera_trigger_task.h"
 
+
 OS_TASK* lidar_message_taskid;
 char rx_buffer[GPSBUFSIZE + GPS_BUF_OFFSET];
 GPS_t GPS;
@@ -80,7 +81,7 @@ static void Timer_FakePPS_CB(void)
 {
   OS_U64 Timer_Time = OS_TIME_Get_us();
 
-  if(!Camera_Tri_Flag) //&& enable_auto_send)
+  if(!Camera_Tri_Flag && enable_auto_send)
   {
   // trigger camera
     HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
@@ -105,12 +106,12 @@ static void Timer_FakePPS_CB(void)
 
 static void Timer_Trig_Cam_CB(void)
 {
-  if(!Camera_Tri_Flag) //&& enable_auto_send)
+  if(!Camera_Tri_Flag && enable_auto_send)
   {
     HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
     Time_Trig_Cam = OS_TIME_Get_us();
     Camera_Tri_Flag = 1;
-    OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
+    //OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
   }
 
   OS_TIMER_Restart(NULL);
@@ -219,7 +220,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   if(GPIO_Pin == GPS_PPS_IN_Pin)
   {
     Time_PPS_IN_us = OS_TIME_Get_us64(); //up to 584942 years;
-    if(!Camera_Tri_Flag) //&& enable_auto_send)
+    if(!Camera_Tri_Flag && enable_auto_send)
     {
     // trigger camera
       HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
@@ -305,10 +306,10 @@ void lidar_message_task(void)
   while(1)
   {
     lidar_te = OS_TASKEVENT_GetBlocked(EVENT_GPIO_0);
-    OS_INT_Disable();
+    //OS_INT_Disable();
     int date = GPS.Date;
     int utc_time = GPS.utc_time;
-    OS_INT_Enable();
+    //OS_INT_Enable();
     Time_GPS_Send = OS_TIME_Get_us64();
     Since_UTC = Time_GPS_Send - Time_PPS_IN_us;
     utc_add_seconds(&date, &utc_time, Since_UTC / 1000000);

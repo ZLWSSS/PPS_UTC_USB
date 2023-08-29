@@ -56,6 +56,8 @@
       Name="Debug Internal"
       arm_fp_abi="SoftFP"
       arm_fpu_type="FPv5-D16"
+      arm_linker_heap_size="8192"
+      arm_linker_stack_size="8192"
       build_intermediate_directory="$(Configuration)"
       build_output_directory="$(Configuration)"
       c_preprocessor_definitions="OS_LIBMODE_DT;DATA_IN_D2_SRAM;__ICACHE_PRESENT =1U;__DCACHE_PRESENT= 1U;__FPU_USED=1U"
@@ -208,10 +210,7 @@
       </folder>
     </folder>
     <folder Name="SEGGER">
-      <file file_name="H7_Support/libos_v7m_t_vfpv4_le_dt.a" />
-      <file file_name="H7_Support/libos_v7m_t_vfpv4_le_r.a">
-        <configuration Name="Debug Internal" build_exclude_from_build="Yes" />
-      </file>
+      <file file_name="H7_Support/libosT7VHLDT.a" />
       <file file_name="SEGGER/SEGGER_RTT.c" />
       <file file_name="SEGGER/SEGGER_RTT_ASM_ARMv7M.S" />
       <file file_name="SEGGER/SEGGER_RTT_printf.c" />
