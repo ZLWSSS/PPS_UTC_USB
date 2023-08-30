@@ -4,7 +4,7 @@
 #include "stdint.h"
 #include "float.h"
 
-#define GPSBUFSIZE  128       // GPS buffer size
+#define GPSBUFSIZE  256       // GPS buffer size
 #define GPS_BUF_OFFSET 32
 
 #define EVENT_GPIO_0 (1u << 0)

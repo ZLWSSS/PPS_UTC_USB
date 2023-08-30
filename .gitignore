@@ -29,5 +29,3 @@
 *.app
 build
 cmake-debug
-Debug Internal
-Release Internal

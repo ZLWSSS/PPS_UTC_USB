@@ -6,6 +6,7 @@
 #include "stdlib.h"
 #include "RTOS.h"
 #include "camera_trigger_task.h"
+#include "dma.h"
 
 
 OS_TASK* lidar_message_taskid;
@@ -207,6 +208,18 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
       
       Usart_Data_Freshed = 1;
     }	
+    memset(rx_buffer, 0, sizeof(rx_buffer));
+    SCB_InvalidateDCache_by_Addr((uint32_t*)(((uint32_t)rx_buffer) & ~(uint32_t)0x1F), GPSBUFSIZE + GPS_BUF_OFFSET);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart1, (uint8_t*)rx_buffer, GPSBUFSIZE);
+  }
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if(huart == &huart1)
+  {
+    MX_DMA_Init();
+    MX_USART1_UART_Init();
     memset(rx_buffer, 0, sizeof(rx_buffer));
     SCB_InvalidateDCache_by_Addr((uint32_t*)(((uint32_t)rx_buffer) & ~(uint32_t)0x1F), GPSBUFSIZE + GPS_BUF_OFFSET);
     HAL_UARTEx_ReceiveToIdle_DMA(&huart1, (uint8_t*)rx_buffer, GPSBUFSIZE);
