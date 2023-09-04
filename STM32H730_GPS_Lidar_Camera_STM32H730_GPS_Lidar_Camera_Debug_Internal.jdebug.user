@@ -2,23 +2,23 @@
 
 OpenDocument="main.c", FilePath="D:/github_repo/PPS_UTC_USB/Core/Src/main.c", Line=62
 OpenDocument="stm32h7xx_hal_uart.h", FilePath="D:/github_repo/PPS_UTC_USB/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h", Line=244
-OpenDocument="camera_trigger_task.c", FilePath="D:/github_repo/PPS_UTC_USB/Usr/Src/camera_trigger_task.c", Line=27
-OpenDocument="lidar_message_task.c", FilePath="D:/github_repo/PPS_UTC_USB/Usr/Src/lidar_message_task.c", Line=0
+OpenDocument="camera_trigger_task.c", FilePath="D:/github_repo/PPS_UTC_USB/Usr/Src/camera_trigger_task.c", Line=12
+OpenDocument="lidar_message_task.c", FilePath="D:/github_repo/PPS_UTC_USB/Usr/Src/lidar_message_task.c", Line=318
 OpenDocument="STM32H7xx_Startup.s", FilePath="D:/github_repo/PPS_UTC_USB/Core/Startup/STM32H7xx_Startup.s", Line=104
 OpenDocument="usbd_custom_hid_if.c", FilePath="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c", Line=197
-OpenDocument="RTOSInit.c", FilePath="D:/github_repo/PPS_UTC_USB/Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/RTOSInit.c", Line=156
+OpenDocument="RTOSInit.c", FilePath="D:/github_repo/PPS_UTC_USB/Middlewares/Third_Party/SEGGER_RTOS_embOS/embOS/Source/RTOSInit.c", Line=163
 OpenDocument="stm32h7xx_ll_usb.c", FilePath="D:/github_repo/PPS_UTC_USB/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c", Line=0
 OpenToolbar="Debug", Floating=0, x=0, y=0
-OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=4, w=785, h=176, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
-OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=785, h=198, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=1, w=842, h=1059, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Code Profile", DockArea=LEFT, x=0, y=0, w=842, h=324, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, GroupByFiles=0, SortRespectsFilters=0, ParentRelativeLoad=0
-OpenWindow="Terminal", DockArea=RIGHT, x=0, y=5, w=785, h=197, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Data Sampling", DockArea=BOTTOM, x=0, y=0, w=2880, h=264, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
-OpenWindow="Timeline", DockArea=RIGHT, x=0, y=3, w=785, h=446, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=1, DataPaneShown=1, PowerPaneShown=1, CodePaneShown=1, PinCursor="Cursor Movable", TimePerDiv="1 ns / Div", TimeStampFormat="Time", DataGraphDrawAsPoints=0, DataGraphLegendShown=1, DataGraphUniformSampleSpacing=0, DataGraphLegendPosition="487;-91", DataGraphShowNamesAtCursor=0, PowerGraphDrawAsPoints=0, PowerGraphLegendShown=1, PowerGraphAvgFilterTime=Off, PowerGraphAvgFilterLen=Off, PowerGraphUniformSampleSpacing=0, PowerGraphLegendPosition="487;-91", CodeGraphLegendShown=1, CodeGraphLegendPosition="416;0"
-OpenWindow="Find Results", DockArea=RIGHT, x=0, y=0, w=785, h=223, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Console", DockArea=LEFT, x=0, y=1, w=842, h=1059, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="RTOS", DockArea=RIGHT, x=0, y=2, w=785, h=163, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, Showing=""
+OpenWindow="Registers 1", DockArea=RIGHT, x=0, y=4, w=785, h=181, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, FilteredItems=[], RefreshRate=1
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=785, h=200, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=1, w=874, h=699, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Code Profile", DockArea=LEFT, x=0, y=0, w=874, h=677, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, GroupByFiles=0, SortRespectsFilters=0, ParentRelativeLoad=0
+OpenWindow="Terminal", DockArea=RIGHT, x=0, y=5, w=785, h=202, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=BOTTOM, x=0, y=0, w=2880, h=271, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Timeline", DockArea=RIGHT, x=0, y=3, w=785, h=421, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=1, DataPaneShown=1, PowerPaneShown=1, CodePaneShown=1, PinCursor="Cursor Movable", TimePerDiv="1 ns / Div", TimeStampFormat="Time", DataGraphDrawAsPoints=0, DataGraphLegendShown=1, DataGraphUniformSampleSpacing=0, DataGraphLegendPosition="487;-91", DataGraphShowNamesAtCursor=0, PowerGraphDrawAsPoints=0, PowerGraphLegendShown=1, PowerGraphAvgFilterTime=Off, PowerGraphAvgFilterLen=Off, PowerGraphUniformSampleSpacing=0, PowerGraphLegendPosition="487;-91", CodeGraphLegendShown=1, CodeGraphLegendPosition="415;0"
+OpenWindow="Find Results", DockArea=RIGHT, x=0, y=0, w=785, h=222, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=LEFT, x=0, y=1, w=874, h=699, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="RTOS", DockArea=RIGHT, x=0, y=2, w=785, h=170, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, Showing=""
 SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
 TableHeader="Code Profile", SortCol="File / Function", SortOrder="ASCENDING", VisibleCols=["File / Function";"Source Coverage";"Inst. Coverage";"Run Count";"Fetch Count";"Load"], ColWidths=[2156;215;248;149;171;131]
 TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time"], ColWidths=[100;100]
@@ -26,15 +26,22 @@ TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="ASCENDING", 
 TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
 TableHeader="Registers 1", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Description"], ColWidths=[308;183;399]
 TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
-TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[214;872;131;101]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[321;872;131;101]
 TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;320]
-WatchedExpression="usb_rx_cmd", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="Since_UTC", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="rx_buffer", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="trig_cam_flag", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="Time_PPS_IN_us", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="GPS", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="Camera_Tri_Flag", Window=Watched Data 1
-WatchedExpression="Time_Camera_Send", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="huart2", RefreshRate=5, Window=Watched Data 1
-WatchedExpression="huart1", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="usb_rx_cmd", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Since_UTC", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_DEC, Window=Watched Data 1
+WatchedExpression="rx_buffer", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="trig_cam_flag", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Time_PPS_IN_us", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="GPS", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Camera_Tri_Flag", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="huart2", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Time_Camera_Send", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="huart1", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="nmeastr", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="validata_checksum", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="transmitted_checksum", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="print_check", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Lidar_GPRMC", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="calculated_check", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="Time_Trig_LidIMU", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1

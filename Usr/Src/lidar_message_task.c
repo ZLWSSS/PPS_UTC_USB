@@ -9,6 +9,7 @@
 #include "dma.h"
 
 
+
 OS_TASK* lidar_message_taskid;
 char rx_buffer[GPSBUFSIZE + GPS_BUF_OFFSET];
 GPS_t GPS;
@@ -16,6 +17,7 @@ char Lidar_GPRMC[GPSBUFSIZE];
 uint8_t comma_index[12];
 char utc[7];
 char date[7];
+//char test_string[200] = "$GPRMC,071253.00,A,2225.64895141,N,11412.53770897,E,0.007,353.4,280423,3.2,W,D*2A";
 
 static OS_TIMER Timer_Fake_PPS;
 static OS_TIMER Timer_Trig_Cam;
@@ -133,14 +135,20 @@ void GPS_Init(void)
   OS_TIMER_Create(&Timer_Trig_Cam, Timer_Trig_Cam_CB, 50); 
 }
 
+char print_check[2];
+uint16_t validata_checksum;
+char  transmitted_checksum[2];
 uint8_t GPS_validate(char *nmeastr)
 {
   volatile int validata_index = 0;
-  int16_t  validata_checksum = 0;
-  uint8_t  transmitted_checksum[2];
+  validata_checksum=0;
+
   if(nmeastr[validata_index] == '$'){validata_index++;}
   else{ return 0;}
-  		
+  if(nmeastr[3] == 'G' && nmeastr[4] == 'G')
+  { 
+    return 0;
+  }
   //校验位
   while((nmeastr[validata_index] != '*') && (validata_index < GPSBUFSIZE))
   {
@@ -153,13 +161,23 @@ uint8_t GPS_validate(char *nmeastr)
   }
 
   if (nmeastr[validata_index] == '*'){
-    transmitted_checksum[0] = nmeastr[validata_index+1];    //put hex chars in check string
-    transmitted_checksum[1] = nmeastr[validata_index+2];
+    transmitted_checksum[0] = nmeastr[validata_index+2];    //put hex chars in check string
+    transmitted_checksum[1] = nmeastr[validata_index+1];
     }
   else
     return 0;// no checksum separator found there for invalid, ! Can not reach here !
-
-  return(((validata_checksum&0xFF) == transmitted_checksum[0]) && ((validata_checksum>>8) == transmitted_checksum[1])) ? 1 : 0 ;
+  //sprintf(print_check, "%02X", validata_checksum);
+  print_check[0] = (validata_checksum & 0x0F);
+  print_check[1] = (validata_checksum >> 4);
+  if(print_check[0] > 0x09)
+   print_check[0] = print_check[0] + 'A' - 0x0A;
+  else 
+   print_check[0] = print_check[0] + '0';
+  if(print_check[1] > 0x09)
+   print_check[1] = print_check[1] + 'A' - 0x0A;
+  else 
+   print_check[1] = print_check[1] + '0';
+  return(((print_check[0]) == transmitted_checksum[0]) && ((print_check[1]) == transmitted_checksum[1])) ? 1 : 0 ;
 }
 
 void GPS_parse(char *GPSstrParse)
@@ -312,9 +330,10 @@ void utc_add_seconds(int *p_date, int *p_day, int seconds) {
   *p_date = day * 10000 + mon * 100 + year;
 }
 
+uint16_t calculated_check;
 void lidar_message_task(void)
 {
-  uint16_t calculated_check;
+  
   GPS_Init();
   lidar_message_taskid = OS_TASK_GetID();
   OS_TASKEVENT lidar_te;
@@ -327,21 +346,28 @@ void lidar_message_task(void)
     //OS_INT_Enable();
     Time_GPS_Send = OS_TIME_Get_us64();
     Since_UTC = Time_GPS_Send - Time_PPS_IN_us;
+    //Since_UTC = 5000000;
     utc_add_seconds(&date, &utc_time, Since_UTC / 1000000);
-    sprintf(Lidar_GPRMC,"$GPRMC,%0.2f,A,2225.58800461,N,11412.51542972,E,0.042,165.0,%d,3.2,W,A*\n",(float)utc_time, date);
-    for(int i = 1; i < GPSBUFSIZE; i++)
+    if(Since_UTC % 1000000 < 950000)
     {
-      if(Lidar_GPRMC[i] != '*')
-      {		
-        calculated_check ^= Lidar_GPRMC[i];
-      }        
-      else
-      {				
-       break;
-      }
+      float utc_time_f = utc_time;
+    
+      sprintf(Lidar_GPRMC,"$GPRMC,%09.2f,A,2225.58800461,N,11412.51542972,E,0.042,165.0,%06d,3.2,W,A*\n", utc_time_f, date);
+      calculated_check=0;
+      for(int i = 1; i < GPSBUFSIZE; i++)
+      {
+       if(Lidar_GPRMC[i] != '*')
+       {		
+         calculated_check ^= Lidar_GPRMC[i];
+       }        
+       else
+       {				
+        break;
+       }
+     }
+      sprintf(Lidar_GPRMC,"$GPRMC,%09.2f,A,2225.58800461,N,11412.51542972,E,0.042,165.0,%06d,3.2,W,A*%02X\n", utc_time_f, date, calculated_check);
+      SCB_CleanDCache_by_Addr((uint32_t*)(((uint32_t)Lidar_GPRMC) & ~(uint32_t)0x1F), sizeof(Lidar_GPRMC)+32);
+      HAL_UART_Transmit_DMA(&huart2, (uint8_t*)(Lidar_GPRMC),sizeof(Lidar_GPRMC));
     }
-    sprintf(Lidar_GPRMC,"$GPRMC,%0.2f,A,2225.58800461,N,11412.51542972,E,0.042,165.0,%d,3.2,W,A*%02X\n",(float)utc_time, date, calculated_check);
-    SCB_CleanDCache_by_Addr((uint32_t*)(((uint32_t)Lidar_GPRMC) & ~(uint32_t)0x1F), sizeof(Lidar_GPRMC)+32);
-    HAL_UART_Transmit_DMA(&huart2, (uint8_t*)(Lidar_GPRMC),sizeof(Lidar_GPRMC));
   }
 }

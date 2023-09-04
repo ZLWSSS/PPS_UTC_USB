@@ -36,7 +36,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-static OS_STACKPTR int StackLidar[512], StackCamera[256];
+static OS_STACKPTR int StackLidar[1024], StackCamera[256];
 static OS_TASK     TCBLidar, TCBCamera;
 /* USER CODE END PTD */
 

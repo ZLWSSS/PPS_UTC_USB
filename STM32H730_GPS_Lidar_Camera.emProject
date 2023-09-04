@@ -54,6 +54,7 @@
       linker_section_placements_segments="FLASH1 RX 0x08000000 0x00020000;FLASH2 RX 0x90000000 0x04000000;RAM1 RWX 0x24000000 0x00020000;" />
     <configuration
       Name="Debug Internal"
+      SEGGER2Proj="No"
       arm_fp_abi="SoftFP"
       arm_fpu_type="FPv5-D16"
       arm_linker_heap_size="8192"
@@ -63,8 +64,11 @@
       c_preprocessor_definitions="OS_LIBMODE_DT;DATA_IN_D2_SRAM;__ICACHE_PRESENT =1U;__DCACHE_PRESENT= 1U;__FPU_USED=1U"
       c_user_include_directories="$(ProjectDir)/SEGGER;$(ProjectDir)/Usr/Inc"
       debug_register_definition_file="$(ProjectDir)/H7_Support/STM32H73x_Registers.xml"
+      gcc_c_language_standard="gnu99"
       link_linker_script_file="$(ProjectDir)/H7_Support/STM32H7xx_Flash_Variant6.icf"
-      linker_memory_map_file="$(ProjectDir)/H7_Support/STM32H730VBTx_MemoryMap.xml" />
+      linker_memory_map_file="$(ProjectDir)/H7_Support/STM32H730VBTx_MemoryMap.xml"
+      linker_printf_fp_enabled="Float"
+      linker_printf_width_precision_supported="Yes" />
     <configuration
       LIBRARY_IO_TYPE="SEMIHOST (host-formatted)"
       Name="Internal" />
@@ -100,39 +104,6 @@
       recurse="Yes" />
     <folder Name="embOS">
       <file file_name="embOS/SEGGER.I-CUBE-embOS_conf.h" />
-    </folder>
-    <folder Name="emRun">
-      <file file_name="emRun/__SEGGER_RTL_RTHEAP.c" />
-      <file file_name="emRun/atomicops.c" />
-      <file file_name="emRun/codesets.c" />
-      <file file_name="emRun/compilerasmops_arm.s" />
-      <file file_name="emRun/config.c" />
-      <file file_name="emRun/convops.c" />
-      <file file_name="emRun/errno_arm.c" />
-      <file file_name="emRun/execops_arm.c" />
-      <file file_name="emRun/fenvops.c" />
-      <file file_name="emRun/fileops.c" />
-      <file file_name="emRun/floatasmops_arm.s" />
-      <file file_name="emRun/floatops.c" />
-      <file file_name="emRun/heapops.c" />
-      <file file_name="emRun/heapops_basic.c" />
-      <file file_name="emRun/intasmops_arm.s" />
-      <file file_name="emRun/intops.c" />
-      <file file_name="emRun/jumpasmops_arm.s" />
-      <file file_name="emRun/locales.c" />
-      <file file_name="emRun/mbops.c" />
-      <file file_name="emRun/phantomops.c" />
-      <file file_name="emRun/prinops.c" />
-      <file file_name="emRun/scanops.c" />
-      <file file_name="emRun/sortops.c" />
-      <file file_name="emRun/strasmops_arm.s" />
-      <file file_name="emRun/strops.c" />
-      <file file_name="emRun/timeops.c" />
-      <file file_name="emRun/utilops.c" />
-      <file file_name="emRun/wconvops.c" />
-      <file file_name="emRun/wprinops.c" />
-      <file file_name="emRun/wscanops.c" />
-      <file file_name="emRun/wstrops.c" />
     </folder>
     <folder Name="Internal Files">
       <file file_name="$(StudioDir)/samples/SEGGER_THUMB_Startup.s" />
