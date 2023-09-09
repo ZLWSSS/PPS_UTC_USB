@@ -101,7 +101,7 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : PtPin */
   GPIO_InitStruct.Pin = Soft_Trigger_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(Soft_Trigger_GPIO_Port, &GPIO_InitStruct);
 
