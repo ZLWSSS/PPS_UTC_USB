@@ -90,11 +90,12 @@ static void Timer_FakePPS_CB(void)
     HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
     Time_Trig_Cam = OS_TIME_Get_us();
     Camera_Tri_Flag = 1;
-    OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
+    // OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
   }
   if((Timer_Time - Time_PPS_IN_us) > 1500000)
   {
-    //触发IMU与Lidar (highest priority in this interrupt callback function) 	
+    //触发IMU与Lidar (highest priority in this interrupt callback function) 
+    Time_PPS_IN_us = OS_TIME_Get_us64();	
     HAL_GPIO_WritePin(GPIOC, IMU_PPS_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, Lidar_PPS_OUT_Pin, GPIO_PIN_SET);
     Time_Trig_LidIMU = OS_TIME_Get_us();
@@ -259,7 +260,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
       HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_SET);
       Time_Trig_Cam = OS_TIME_Get_us();
       Camera_Tri_Flag = 1;
-      OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
+      // OS_TASKEVENT_Set(camera_report_taskid, EVENT_CAMERA);
     }
     if((Time_PPS_IN_us - Time_Since_PPS_us) < 1500000)
     {
@@ -345,7 +346,7 @@ void lidar_message_task(void)
     int utc_time = GPS.utc_time;
     //OS_INT_Enable();
     Time_GPS_Send = OS_TIME_Get_us64();
-    Since_UTC = Time_GPS_Send - Time_PPS_IN_us;
+    Since_UTC = Time_GPS_Send - GPS.time;
     //Since_UTC = 5000000;
     utc_add_seconds(&date, &utc_time, Since_UTC / 1000000);
     if(Since_UTC % 1000000 < 950000)

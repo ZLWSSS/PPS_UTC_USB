@@ -38,9 +38,11 @@ void camera_utc_task(void)
   memset(&utc_real_data, 0, sizeof(usb_utc_data));
   camera_report_taskid = OS_TASK_GetID();
   OS_TASKEVENT cam_task_event;
+  uint8_t v = 0;
   while(1)
   {
     cam_task_event = OS_TASKEVENT_GetBlocked(EVENT_CAMERA);
+    v = 0;
     Time_Camera_Send = OS_TIME_Get_us64();
     if(trig_imu_flag)
     {
@@ -49,6 +51,7 @@ void camera_utc_task(void)
       delay_ms(10);
       HAL_GPIO_WritePin(IMU_Trigger_GPIO_Port, IMU_Trigger_Pin, GPIO_PIN_RESET);
       trig_imu_flag = 0;
+      v = 1;
     }
     else if(trig_cam_flag)
     {
@@ -57,15 +60,18 @@ void camera_utc_task(void)
       delay_ms(10);
       HAL_GPIO_WritePin(GPIOA, Camera_triger_Pin, GPIO_PIN_RESET);
       trig_cam_flag = 0;
+      v = 1;
     }
-    OS_INT_Disable();
-    Since_UTC = Time_Camera_Send - local_gps_data->time;
-    utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
-    utc_real_data.real_utc = local_gps_data->utc_time;
-    utc_real_data.date_utc = local_gps_data->Date;
-    OS_INT_Enable();
-    utc_real_data.checksum = data_checksum((uint32_t*) &utc_real_data, sizecheck);
-    USBD_CUSTOM_HID_SendReport_HS((uint8_t*) &utc_real_data,  sizeutccmd);
+    if (v) {
+      OS_INT_Disable();
+      Since_UTC = Time_Camera_Send - local_gps_data->time;
+      utc_real_data.st_time = (double)(((double)Since_UTC / 1000000.0));
+      utc_real_data.real_utc = local_gps_data->utc_time;
+      utc_real_data.date_utc = local_gps_data->Date;
+      OS_INT_Enable();
+      utc_real_data.checksum = data_checksum((uint32_t*) &utc_real_data, sizecheck);
+      USBD_CUSTOM_HID_SendReport_HS((uint8_t*) &utc_real_data,  sizeutccmd);
+    }
   }
 }
 
