@@ -183,7 +183,7 @@ uint8_t GPS_validate(char *nmeastr)
 
 void GPS_parse(char *GPSstrParse)
 {
-  if (!strncmp(GPSstrParse, "$GPRMC", 6))
+  if (!strncmp(GPSstrParse, "$GNRMC", 6))
   {
     int i = 0;	
     int index_comma = 0;
