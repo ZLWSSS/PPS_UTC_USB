@@ -77,9 +77,9 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="30" y="2366" useTextEdit="1" openedFrom="E:/Github_Rep/PPS_UTC_USB/Core/Src/stm32h7xx_it.c" path="Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" left="0" top="2358" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="325" useTextEdit="1" path="USB_DEVICE/App/usbd_desc.c" left="0" top="306" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="44" y="103" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Core/Src/main.c" path="Core/Src/gpio.c" left="0" top="92" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="63" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c" path="Usr/Src/camera_trigger_task.c" left="0" top="52" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="63" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/USB_DEVICE/App/usbd_custom_hid_if.c" path="Usr/Src/camera_trigger_task.c" left="0" top="29" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="35" y="82" useTextEdit="1" path="Core/Src/usart.c" left="0" top="67" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="118" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" top="98" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="118" useTextEdit="1" path="Usr/Src/lidar_message_task.c" left="0" selected="1" top="163" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="13" y="14" useTextEdit="1" openedFrom="E:/Github_Rep/PPS_UTC_USB/Usr/Src/lidar_message_task.c" path="Usr/Inc/lidar_message_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="23" y="11" useTextEdit="1" openedFrom="E:/ES_Project/PTC/Usr/Src/camera_trigger_task.c" path="Usr/Inc/camera_trigger_task.h" left="0" top="3" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/Usr/Src/lidar_message_task.c" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 7.30/include/string.h" left="0" top="44" codecName="Default"/>
@@ -98,7 +98,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="Usr/Src/bsp_lcd.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1658" useTextEdit="1" openedFrom="E:/Github_Rep/PPS_UTC_USB/Usr/Src/lidar_message_task.c" path="Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h" left="0" top="1645" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="D:/github_repo/PPS_UTC_USB/Usr/Src/lidar_message_task.c" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 7.30/include/stdio.h" left="0" top="147" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="H7_Support/STM32H7xx_Flash_Variant6.icf" left="0" selected="1" top="78" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="H7_Support/STM32H7xx_Flash_Variant6.icf" left="0" top="78" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="STM32H730_GPS_Lidar_Camera" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug Internal" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/github_repo/PPS_UTC_USB/H7_Support" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
